@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "qcIKMY76NmSbFo0GrsPUAcP2+nx+4vTK1rIE7rUQLZQxBC0VXCULgkL8sZ5f84Y+Iyf+vcnhNL6lw+6gJ2ntAw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Pagamento.Api\\Loja.Back.Pagamento.Api.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512"
+  ],
+  "logs": []
+}
