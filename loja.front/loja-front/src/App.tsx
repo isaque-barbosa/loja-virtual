@@ -1,12 +1,12 @@
-import React from 'react';
-import { Default } from './template/default';
-import { Header } from './components/header';
+import { MainContent } from "./hooks/MainContent";
+
+import "./styles/global.css";
 
 function App() {
   return (
-      <Default>
-        <Header />
-      </Default>
+    <MainContent>
+      <h1>Hello World!</h1>
+    </MainContent>
   );
 }
 
