@@ -1,12 +1,18 @@
-import { MainContent } from "./hooks/MainContent";
+import { Home } from "./pages/Home";
+import { Login } from "./pages/Login";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
 import "./styles/global.css";
 
 function App() {
   return (
-    <MainContent>
-      <h1>Hello World!</h1>
-    </MainContent>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/login" element={<Login />} />
+    </Routes>
+    </BrowserRouter>
   );
 }
 
