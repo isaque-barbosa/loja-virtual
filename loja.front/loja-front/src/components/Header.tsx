@@ -1,7 +1,15 @@
-import "../styles/nav.css";
+import { Link } from "react-router-dom";
+
 import Logo from "../images/logo.svg";
 
+import "../styles/nav.css";
+
 export function Header(){
+
+    function IsActive(path: string){
+        if(window.location.pathname === path) return "active"
+        return "";
+    }
 
     return(
         <div className="topnav">
@@ -14,8 +22,8 @@ export function Header(){
                     <button type="submit">Procurar</button>
                 </form>
             </div>
-            <a className="active" href="#contact">Entrar</a>
-            <a href="#news">Carrinho</a>
+            <Link className={IsActive("/login")} to="/login">Entrar</Link>
+            <Link className={IsActive("/")} to="/">Carrinho</Link>
         </div>
     );
 }
