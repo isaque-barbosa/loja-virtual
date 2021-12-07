@@ -1,5 +1,7 @@
 import { Home } from "./pages/Home";
 import { LogIn } from "./pages/Login";
+import { Registrar } from "./pages/Registrar";
+import { Carrinho } from "./pages/Carrinho";
 
 import { isAuthenticated } from './services/auth';
 
@@ -26,6 +28,8 @@ function App() {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/login" element={<LogIn />} />
+      <Route path="/registrar" element={<Registrar />} />
+      <Route path="/carrinho" element={isAuthenticated() ? <Carrinho /> : <LogIn />} />
     </Routes>
     </BrowserRouter>
   );

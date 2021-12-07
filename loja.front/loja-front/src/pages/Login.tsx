@@ -9,7 +9,7 @@ interface User {
 }
 
 export const LogIn: React.FC = () => {
-    const {} = useFetch<User>("api/login");
+    //const {} = useFetch<User>("api/login");
 
     return(
         <MainContent>
