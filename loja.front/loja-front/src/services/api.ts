@@ -1,6 +1,15 @@
 import axios from 'axios';
 import { getToken } from './auth';
 
+export interface Error{
+    title: string;
+    status: number;
+    errors: Errors;
+}
+interface Errors{
+    Mensagens: string[];
+}
+
 const api = axios.create({
     baseURL: 'https://localhost:44321/'
 });

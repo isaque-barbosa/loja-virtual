@@ -1,8 +1,8 @@
 export const TOKEN_KEY = "user";
 export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
-export const getToken = () => JSON.parse(localStorage.getItem(TOKEN_KEY) || "");
+export const getToken = () => localStorage.getItem(TOKEN_KEY);
 
-interface TokenAcess {
+export interface TokenAcess {
     acessToken: string,
     expireIn: number,
     usuarioToken: UserToken

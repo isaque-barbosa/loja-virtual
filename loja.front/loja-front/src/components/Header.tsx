@@ -14,7 +14,7 @@ export function Header(){
     return(
         <div className="topnav">
             <div>
-                <img src={Logo} alt="Logo da empresa" />
+                <Link to="/"><img src={Logo} alt="Logo da empresa" /></Link>
             </div>
             <div className="search-container">
                 <form>
@@ -23,7 +23,7 @@ export function Header(){
                 </form>
             </div>
             <Link className={IsActive("/login")} to="/login">Entrar</Link>
-            <Link className={IsActive("/")} to="/">Carrinho</Link>
+            <Link className={IsActive("/carrinho")} to="/carrinho">Carrinho</Link>
         </div>
     );
 }

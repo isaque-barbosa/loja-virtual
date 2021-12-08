@@ -1,13 +1,4 @@
-import React from "react";
-
 import { MainContent } from "../hooks/MainContent";
-import { useFetch } from "../hooks/useFetch";
-
-interface Produto {
-    id: number;
-    nome: string;
-    preco: number;
-};
 
 // export const Home: React.FC = () => {
 //     //const { data } = useFetch<Produto[]>(`http://localhost:5001/api/produto/detalhes/${id}`);
