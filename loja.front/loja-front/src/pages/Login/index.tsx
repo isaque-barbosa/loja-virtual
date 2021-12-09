@@ -17,27 +17,42 @@ export const LogIn: React.FC = () => {
 
     const [email, setEmail] = useState<string>("");
     const [senha, setSenha] = useState<string>("");
-    const [error, setError] = useState<string>();
+    const [error, setError] = useState<string[]>();
 
-    const handleLogin: React.FormEventHandler<HTMLFormElement> = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleLogin: React.FormEventHandler<HTMLFormElement> = async (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
         const model = { email: email, senha: senha } as User;
+        const erros = [];
 
-        api.post<TokenAcess>("api/identidade/autenticar", model)
+        if(!model.email.trim() || !model.senha.trim()){
+            erros.push("Preencha o usuário e/ou senha para conseguir entrar no sistema.");
+        }
+
+        await api.post<TokenAcess>("api/identidade/autenticar", model)
             .then(response => {
                 login(response.data);
                 console.log(getToken());
             })
             .catch(function (error) {
-                console.log(error.response.data as Error);
+                try{
+                    const response = error.response.data as Error;
+                    erros.push(response.errors.Mensagens[0])
+                    console.log(response);
+                }
+                catch{
+                    erros.push("Servidor indisponível. Desculpe a inconveniência! Tente novamente mais tarde.");
+                }
             });
+            setError(erros);
 
-        e.preventDefault();
+        
     };
 
     return(
         <MainContent>
             <Container>
                 <Form onSubmit={handleLogin}>
+                    {error && <div>{error.map((error, i) => { return <p key={error}>{error}</p> })}</div>}
                     <label>E-mail</label>
                     <input type="email"
                            placeholder="example@hotmail.com"
