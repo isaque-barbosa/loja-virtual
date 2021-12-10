@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link} from "react-router-dom";
 
-import { MainContent } from "../../hooks/MainContent";
+import { MainContent } from "../../components/MainContent";
 import api, { Error } from "../../services/api";
 
 import { getToken, login, TokenAcess } from "../../services/auth";

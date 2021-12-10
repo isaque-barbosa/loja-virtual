@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 
-import { Header } from "../components/Header";
-import { Footer } from "../components/Footer";
+import { Header } from "./Header";
+import { Footer } from "./Footer";
 
 type MainContentProps = {
     children: ReactNode

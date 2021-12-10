@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import { MainContent } from "../../hooks/MainContent";
+import { MainContent } from "../../components/MainContent";
 import api from "../../services/api";
 
 import Logo from "../../images/logo.svg";

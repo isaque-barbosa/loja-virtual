@@ -14,6 +14,7 @@
 
   .topnav div {
     float: left;
+    padding-top: 12px;
     color: #f2f2f2;
     text-align: center;
     text-decoration: none;
@@ -46,7 +47,7 @@
 .topnav input[type=text] {
   width: 55vw !important;
   padding: 6px;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   font-size: 17px;
   border: none;
 }
@@ -55,7 +56,7 @@
   float: right;
   padding: 6px !important;
   margin-right: 16px !important;
-  margin-top: 12px;
+  /* margin-top: 12px; */
   background: #ddd;
   font-size: 17px;
   border: none;

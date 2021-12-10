@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MainContent } from "../hooks/MainContent";
+import { MainContent } from "../components/MainContent";
 import { useFetch } from "../hooks/useFetch";
 
 interface Produto {

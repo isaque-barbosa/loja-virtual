@@ -2,6 +2,8 @@ import { Link } from "react-router-dom";
 
 import Logo from "../images/logo.svg";
 
+import { isAuthenticated, logout, getEmail } from "../services/auth";
+
 import "../styles/nav.css";
 
 export function Header(){
@@ -9,6 +11,14 @@ export function Header(){
     function IsActive(path: string){
         if(window.location.pathname === path) return "active"
         return "";
+    }
+
+    //const [user, setUser] = useState<string>("");
+    let user = "";
+
+    if(isAuthenticated())
+    {
+        user = getEmail().split("@")[0];
     }
 
     return(
@@ -22,8 +32,10 @@ export function Header(){
                     <button type="submit">Procurar</button>
                 </form>
             </div>
-            <Link className={IsActive("/login")} to="/login">Entrar</Link>
+            { isAuthenticated() && <a>Olá, {user}!</a> }
             <Link className={IsActive("/carrinho")} to="/carrinho">Carrinho</Link>
+            { isAuthenticated() && <Link onClick={() => {logout(); window.location.reload();}} to="/">Sair</Link> }
+            { !isAuthenticated() && <Link className={IsActive("/login")} to="/login">Entrar</Link> }
         </div>
     );
 }

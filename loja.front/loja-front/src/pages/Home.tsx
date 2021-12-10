@@ -1,4 +1,4 @@
-import { MainContent } from "../hooks/MainContent";
+import { MainContent } from "../components/MainContent";
 
 // export const Home: React.FC = () => {
 //     //const { data } = useFetch<Produto[]>(`http://localhost:5001/api/produto/detalhes/${id}`);

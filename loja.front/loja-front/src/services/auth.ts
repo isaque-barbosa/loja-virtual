@@ -26,3 +26,8 @@ export const login = function(token: TokenAcess){
 export const logout = () => {
   localStorage.removeItem(TOKEN_KEY);
 };
+
+export const getEmail = () => {
+  return (JSON.parse(getToken() || "") as TokenAcess)
+          .usuarioToken.claims.find(x => x.type === "email")?.value || "";
+};
