@@ -38,6 +38,11 @@ namespace Loja.Back.Identidade.Api
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            app.UseCors(cors =>
+                cors.AllowAnyOrigin()
+                    .AllowAnyHeader()
+                    .AllowAnyMethod());
+
             app.UseSwaggerConfiguration();
 
             app.UseApiConfiguration(env);
