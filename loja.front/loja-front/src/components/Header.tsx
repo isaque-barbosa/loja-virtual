@@ -8,6 +8,21 @@ import "../styles/nav.css";
 
 export function Header(){
 
+    function abrirDropdown() {
+        document?.getElementById("myDropdown")?.classList.toggle("show");
+    }
+
+    window.onclick = function(e) {
+        if(e.target instanceof Element){
+            if (!e?.target?.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown?.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
+
     function IsActive(path: string){
         if(window.location.pathname === path) return "active"
         return "";
@@ -32,9 +47,16 @@ export function Header(){
                     <button type="submit">Procurar</button>
                 </form>
             </div>
-            { isAuthenticated() && <a>Olá, {user}!</a> }
+            { isAuthenticated() && <div className="dropdown">
+                                        <button className="dropbtn" onClick={abrirDropdown}>Olá, {user}!
+                                            <i className="fa fa-caret-down"></i>
+                                        </button>
+                                        <div className="dropdown-content" id="myDropdown">
+                                            <Link to="/">Meu Perfil</Link>
+                                            <Link onClick={() => {logout(); window.location.reload();}} to="/">Sair</Link>
+                                        </div>
+                                    </div> }
             <Link className={IsActive("/carrinho")} to="/carrinho">Carrinho</Link>
-            { isAuthenticated() && <Link onClick={() => {logout(); window.location.reload();}} to="/">Sair</Link> }
             { !isAuthenticated() && <Link className={IsActive("/login")} to="/login">Entrar</Link> }
         </div>
     );

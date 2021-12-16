@@ -25,4 +25,23 @@ api.interceptors.request.use(async config => {
     return config;
 });
 
+api.interceptors.response.use(function(onResponse){
+        return onResponse;
+    }, 
+    function(onError) {
+        switch(onError.response.status){
+            case 401:
+                console.log("Fobidden");
+                break;
+            case 403:
+                console.log("Você não tem permissão");
+                break;
+            case 500:
+                console.log("Ocorreu um erro!");
+                break;
+        };
+        return Promise.reject(onError);
+    }
+);
+
 export default api;
