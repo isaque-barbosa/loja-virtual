@@ -3,7 +3,7 @@ using System;
 
 namespace Loja.Back.Core.Data
 {
-    public interface IRepository<T> :IDisposable where T : IAggregateRoot
+    public interface IRepository<T> : IDisposable where T : IAggregateRoot
     {
 
     }

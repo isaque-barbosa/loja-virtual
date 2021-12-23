@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace Loja.Back.Catalogo.Api.Models
 {
-    public interface IProdutoRepository :IRepository<Produto>
+    public interface IProdutoRepository : IRepository<Produto>
     {
         Task<IEnumerable<Produto>> ObterTodos();
         Task<Produto> ObterPorId(Guid id);

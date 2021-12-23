@@ -11,7 +11,7 @@
           "lib/netstandard2.0/Humanizer.dll": {}
         }
       },
-      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.12": {
+      "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.13": {
         "type": "package",
         "dependencies": {
           "Microsoft.IdentityModel.Protocols.OpenIdConnect": "6.7.1"
@@ -1550,6 +1550,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Loja.Back.WebAPI.Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13"
+        },
+        "compile": {
+          "bin/placeholder/Loja.Back.WebAPI.Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Loja.Back.WebAPI.Core.dll": {}
+        }
       }
     }
   },
@@ -1570,10 +1583,10 @@
         "logo.png"
       ]
     },
-    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.12": {
-      "sha512": "3JwsAApGFKFBVvlV8vMNdF04Mb8zPuHT5q8sunwNTbaN4JtjXLVGKAyUCy+I1JeqP+3EKfZxe3wMj4fVEOLKlA==",
+    "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.13": {
+      "sha512": "1A7zBeKjmD/6trvVcvgoYDrTNk3LwmlLwrd6tnSDS6ePyjE1Nbu7NjqC7cisUAzQGMd7xp0aXKIrJ8YW6iHisQ==",
       "type": "package",
-      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.12",
+      "path": "microsoft.aspnetcore.authentication.jwtbearer/5.0.13",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1581,7 +1594,7 @@
         "THIRD-PARTY-NOTICES.TXT",
         "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.dll",
         "lib/net5.0/Microsoft.AspNetCore.Authentication.JwtBearer.xml",
-        "microsoft.aspnetcore.authentication.jwtbearer.5.0.12.nupkg.sha512",
+        "microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
         "microsoft.aspnetcore.authentication.jwtbearer.nuspec"
       ]
     },
@@ -5797,11 +5810,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Loja.Back.WebAPI.Core/1.0.0": {
+      "type": "project",
+      "path": "../../building blocks/Loja.Back.WebAPI.Core/Loja.Back.WebAPI.Core.csproj",
+      "msbuildProject": "../../building blocks/Loja.Back.WebAPI.Core/Loja.Back.WebAPI.Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.12",
+      "Loja.Back.WebAPI.Core >= 1.0.0",
+      "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.13",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore >= 5.0.12",
       "Microsoft.EntityFrameworkCore.Abstractions >= 5.0.12",
@@ -5839,7 +5858,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj": {
+              "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5854,7 +5877,7 @@
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
-            "version": "[5.0.12, )"
+            "version": "[5.0.13, )"
           },
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
             "target": "Package",

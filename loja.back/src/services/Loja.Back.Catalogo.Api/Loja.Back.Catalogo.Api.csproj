@@ -17,15 +17,16 @@
     <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="5.0.13" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.11.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\..\building blocks\Loja.Back.Core\Loja.Back.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj" />
   </ItemGroup>
 
 </Project>

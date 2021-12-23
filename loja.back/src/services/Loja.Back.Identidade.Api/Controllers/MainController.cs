@@ -1,9 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.ModelBinding;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja.Back.Identidade.Api.Controllers
 {
@@ -14,7 +12,7 @@ namespace Loja.Back.Identidade.Api.Controllers
 
         protected IActionResult CustomResponse(object result = null)
         {
-            if(OperacaoValida())
+            if (OperacaoValida())
             {
                 return Ok(result);
             }
@@ -29,7 +27,7 @@ namespace Loja.Back.Identidade.Api.Controllers
         {
             var erros = modelState.Values.SelectMany(x => x.Errors);
 
-            foreach(var erro in erros)
+            foreach (var erro in erros)
             {
                 AdicionarErroProcessamento(erro.ErrorMessage);
             }

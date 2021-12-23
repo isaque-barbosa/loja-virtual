@@ -19,7 +19,7 @@ namespace Loja.Back.Identidade.Api
                 .AddJsonFile($"appsettings.{hostEnvironment.EnvironmentName}.json", true, true)
                 .AddEnvironmentVariables();
 
-            if(hostEnvironment.IsDevelopment())
+            if (hostEnvironment.IsDevelopment())
             {
                 builder.AddUserSecrets<Startup>();
             }

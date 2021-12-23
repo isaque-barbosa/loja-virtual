@@ -1,10 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja.Back.MVC.Configuration
 {
@@ -13,7 +9,7 @@ namespace Loja.Back.MVC.Configuration
         public static void AddIdentityConfiguration(this IServiceCollection services)
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options => 
+                .AddCookie(options =>
                 {
                     options.LoginPath = "/login";
                     options.AccessDeniedPath = "/acesso-negado";

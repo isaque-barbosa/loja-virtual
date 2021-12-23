@@ -13,35 +13,42 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{E3D37E1E-3D4
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Identidade", "Identidade", "{F07B88A9-EB27-42A0-9038-9EEE991DD647}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Identidade.Api", "src\services\Loja.Back.Identidade.Api\Loja.Back.Identidade.Api.csproj", "{86BB00C6-EA4D-46AC-BA80-5D04C1534DB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Identidade.Api", "src\services\Loja.Back.Identidade.Api\Loja.Back.Identidade.Api.csproj", "{86BB00C6-EA4D-46AC-BA80-5D04C1534DB0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6} = {76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{7BEB86C2-6EFD-4656-A6F2-16C0E6FCFF5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.MVC", "src\web\Loja.Back.MVC\Loja.Back.MVC.csproj", "{53CF2E56-00D0-43E5-9402-BDE1624AA704}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.MVC", "src\web\Loja.Back.MVC\Loja.Back.MVC.csproj", "{53CF2E56-00D0-43E5-9402-BDE1624AA704}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{66D4FEB0-B3EA-4D46-A767-B32B2874D05E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Core", "src\building blocks\Loja.Back.Core\Loja.Back.Core.csproj", "{505ECF27-9793-47D1-A73E-D71822BC730B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Core", "src\building blocks\Loja.Back.Core\Loja.Back.Core.csproj", "{505ECF27-9793-47D1-A73E-D71822BC730B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Carrinho", "Carrinho", "{3EE04579-08BD-4A12-803B-072037903A4F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Catalogo", "Catalogo", "{43393F64-DB87-4E88-B95B-F8AE134B5B42}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Carrinho.Api", "src\services\Loja.Back.Carrinho.Api\Loja.Back.Carrinho.Api.csproj", "{525124B9-0260-4979-BA70-C983148E5E97}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Carrinho.Api", "src\services\Loja.Back.Carrinho.Api\Loja.Back.Carrinho.Api.csproj", "{525124B9-0260-4979-BA70-C983148E5E97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Catalogo.Api", "src\services\Loja.Back.Catalogo.Api\Loja.Back.Catalogo.Api.csproj", "{058AD58F-FE57-41A8-A813-9266D9E0085B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Catalogo.Api", "src\services\Loja.Back.Catalogo.Api\Loja.Back.Catalogo.Api.csproj", "{058AD58F-FE57-41A8-A813-9266D9E0085B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cliente", "Cliente", "{AE429CD2-43A2-4973-9C86-620EA280A8E1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Cliente.Api", "src\services\Loja.Back.Cliente.Api\Loja.Back.Cliente.Api.csproj", "{41DE4A12-596E-479E-8F86-4094B02D7FB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Cliente.Api", "src\services\Loja.Back.Cliente.Api\Loja.Back.Cliente.Api.csproj", "{41DE4A12-596E-479E-8F86-4094B02D7FB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamento", "Pagamento", "{01B0F6CC-C8A2-485B-9D6E-C1051AEA8180}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedido", "Pedido", "{BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Pagamento.Api", "src\services\Loja.Back.Pagamento.Api\Loja.Back.Pagamento.Api.csproj", "{2066CA51-ABD9-4D3B-9385-5325361054FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pagamento.Api", "src\services\Loja.Back.Pagamento.Api\Loja.Back.Pagamento.Api.csproj", "{2066CA51-ABD9-4D3B-9385-5325361054FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Pedido.Api", "src\services\Loja.Back.Pedido.Api\Loja.Back.Pedido.Api.csproj", "{3D26D652-1C97-4072-B793-C3A877B5E399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pedido.Api", "src\services\Loja.Back.Pedido.Api\Loja.Back.Pedido.Api.csproj", "{3D26D652-1C97-4072-B793-C3A877B5E399}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{208D9936-99DD-41D9-B5FC-A8BF135A7D5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.WebAPI.Core", "src\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj", "{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +88,10 @@ Global
 		{3D26D652-1C97-4072-B793-C3A877B5E399}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D26D652-1C97-4072-B793-C3A877B5E399}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D26D652-1C97-4072-B793-C3A877B5E399}.Release|Any CPU.Build.0 = Release|Any CPU
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -105,6 +116,8 @@ Global
 		{BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9} = {77B092B3-3ED0-481F-8F3C-BEA629763F63}
 		{2066CA51-ABD9-4D3B-9385-5325361054FB} = {01B0F6CC-C8A2-485B-9D6E-C1051AEA8180}
 		{3D26D652-1C97-4072-B793-C3A877B5E399} = {BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9}
+		{208D9936-99DD-41D9-B5FC-A8BF135A7D5F} = {A605EE49-698A-42FD-89D1-E0B28B848F9E}
+		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6} = {208D9936-99DD-41D9-B5FC-A8BF135A7D5F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2EB0A6-117C-4167-9BCB-CD04CB936A71}

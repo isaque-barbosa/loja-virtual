@@ -1,10 +1,9 @@
-﻿using Loja.Back.Identidade.Api.Extensions;
+﻿using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
@@ -44,7 +43,7 @@ namespace Loja.Back.Identidade.Api.Controllers
 
             var result = await _userManager.CreateAsync(user, model.Senha);
 
-            if(result.Succeeded)
+            if (result.Succeeded)
             {
                 //await _signInManager.SignInAsync(user, false);
                 return CustomResponse(await GerarJwt(model.Email));

@@ -18,7 +18,7 @@ namespace Loja.Back.Catalogo.Api.Data
         {
             foreach (var property in modelBuilder.Model.GetEntityTypes().
                 SelectMany(x => x.GetProperties().Where(y => y.ClrType == typeof(string))))
-                    property.SetColumnType("varchar(100)");
+                property.SetColumnType("varchar(100)");
 
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(CatalogoContext).Assembly);
         }
