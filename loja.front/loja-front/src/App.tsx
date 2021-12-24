@@ -1,4 +1,4 @@
-import { Home } from "./pages/Home";
+import { Home } from "./pages/Home/index";
 import { LogIn } from "./pages/Login/index";
 import { Registrar } from "./pages/Registrar/index";
 import { Carrinho } from "./pages/Carrinho";

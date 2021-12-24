@@ -1,7 +1,12 @@
 .footer {
+    margin: 3vh 0 0 0;
     left: 0;
     bottom: 0;
     width: 100%;
     color: black;
     text-align: center;
+    background-color: #04AA6D;
+}
+.footer p {
+    padding: 5vh 0 2vh 0;
 }
