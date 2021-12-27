@@ -1,4 +1,6 @@
 ﻿using Loja.Back.Catalogo.Api.Models;
+using Loja.Back.WebAPI.Core.Identitdade;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -7,6 +9,7 @@ using System.Threading.Tasks;
 namespace Loja.Back.Catalogo.Api.Controllers
 {
     [ApiController]
+    [Authorize]
     public class CatalogoController : Controller
     {
         private readonly IProdutoRepository _produtoRepository;
@@ -22,6 +25,7 @@ namespace Loja.Back.Catalogo.Api.Controllers
             return await _produtoRepository.ObterTodos();
         }
 
+        [ClaimsAuthorizeAttibute("Catalogo", "Ler")]
         [HttpGet("catalogo/produtos/{id}")]
         public async Task<Produto> ProdutoDetalhe(Guid id)
         {
