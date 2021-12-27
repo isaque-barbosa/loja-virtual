@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken } from './auth';
+import { getToken, TokenAcess } from './auth';
 
 export interface Error{
     title: string;
@@ -16,9 +16,10 @@ const api = axios.create({
 
 api.interceptors.request.use(async config => {
     const token = getToken();
+
     if(token){
         config.headers = {
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${token.acessToken}`
         };
     }
 
@@ -31,10 +32,10 @@ api.interceptors.response.use(function(onResponse){
     function(onError) {
         switch(onError.response.status){
             case 401:
-                console.log("Fobidden");
+                console.log("Não autorizado");
                 break;
             case 403:
-                console.log("Você não tem permissão");
+                console.log("Forbidden");
                 break;
             case 500:
                 console.log("Ocorreu um erro!");

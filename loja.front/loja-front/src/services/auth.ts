@@ -1,6 +1,6 @@
 export const TOKEN_KEY = "user";
 export const isAuthenticated = () => localStorage.getItem(TOKEN_KEY) !== null;
-export const getToken = () => localStorage.getItem(TOKEN_KEY);
+export const getToken = () => JSON.parse(localStorage.getItem(TOKEN_KEY) as string) as TokenAcess;
 
 export interface TokenAcess {
     acessToken: string,
@@ -28,6 +28,6 @@ export const logout = () => {
 };
 
 export const getEmail = () => {
-  return (JSON.parse(getToken() || "") as TokenAcess)
+  return (getToken())
           .usuarioToken.claims.find(x => x.type === "email")?.value || "";
 };
