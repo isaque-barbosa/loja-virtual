@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link} from "react-router-dom";
+import { Link, useNavigate  } from "react-router-dom";
 
 import { MainContent } from "../../components/MainContent";
 import api, { Error } from "../../services/api";
 
-import { getToken, login, TokenAcess } from "../../services/auth";
+import { login, TokenAcess } from "../../services/auth";
 
 import { Container, Form } from "./styles";
 
@@ -14,6 +14,7 @@ interface User {
 }
 
 export const LogIn: React.FC = () => {
+    const navigate = useNavigate();
 
     const [email, setEmail] = useState<string>("");
     const [senha, setSenha] = useState<string>("");
@@ -31,7 +32,7 @@ export const LogIn: React.FC = () => {
         await api.post<TokenAcess>("api/identidade/autenticar", model)
             .then(response => {
                 login(response.data);
-                console.log(getToken());
+                navigate("/");
             })
             .catch(function (error) {
                 try{

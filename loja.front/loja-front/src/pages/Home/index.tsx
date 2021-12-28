@@ -4,11 +4,12 @@ import { MainContent } from "../../components/MainContent";
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
 import { IProduto } from "../Produto/index";
+import { catalogoUrl } from "../../services/api";
 
 import { Card, Container, Column, Row } from "./style";
 
 export const Home: React.FC = () => {
-    const { data } = useFetch<IProduto[]>("https://localhost:44391/catalogo/produtos");
+    const { data } = useFetch<IProduto[]>(`${catalogoUrl}/catalogo/produtos`);
     
     if(!data){
         return <p>Carregando...</p>

@@ -3,6 +3,7 @@ import { MainContent } from "../../components/MainContent";
 
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
+import { catalogoUrl } from "../../services/api";
 
 export interface IProduto {
     id: string;
@@ -18,9 +19,8 @@ export interface IProduto {
 
 export const Produto: React.FC = () => {
     const { id } = useParams();
-    console.log(id);
 
-    const { data } = useFetch<IProduto>(`https://localhost:44391/catalogo/produtos/${id}`);
+    const { data } = useFetch<IProduto>(`${catalogoUrl}/catalogo/produtos/${id}`);
 
     console.log(data);
     if(!data){

@@ -1,5 +1,8 @@
 import axios from 'axios';
-import { getToken, TokenAcess } from './auth';
+import { getToken } from './auth';
+
+export const loginUrl = 'https://localhost:44321/';
+export const catalogoUrl = 'https://localhost:44391';
 
 export interface Error{
     title: string;
@@ -11,7 +14,7 @@ interface Errors{
 }
 
 const api = axios.create({
-    baseURL: 'https://localhost:44321/'
+    baseURL: loginUrl
 });
 
 api.interceptors.request.use(async config => {
@@ -32,7 +35,7 @@ api.interceptors.response.use(function(onResponse){
     function(onError) {
         switch(onError.response.status){
             case 401:
-                console.log("Não autorizado");
+                window.location.href = "/login";
                 break;
             case 403:
                 console.log("Forbidden");
