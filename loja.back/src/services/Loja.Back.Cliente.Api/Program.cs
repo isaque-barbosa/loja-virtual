@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace Loja.Back.Cliente.Api
+namespace Loja.Back.Clientes.Api
 {
     public class Program
     {

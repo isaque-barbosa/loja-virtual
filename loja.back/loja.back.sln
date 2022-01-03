@@ -36,7 +36,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Catalogo.Api", "s
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Cliente", "Cliente", "{AE429CD2-43A2-4973-9C86-620EA280A8E1}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Cliente.Api", "src\services\Loja.Back.Cliente.Api\Loja.Back.Cliente.Api.csproj", "{41DE4A12-596E-479E-8F86-4094B02D7FB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Clientes.Api", "src\services\Loja.Back.Cliente.Api\Loja.Back.Clientes.Api.csproj", "{41DE4A12-596E-479E-8F86-4094B02D7FB1}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pagamento", "Pagamento", "{01B0F6CC-C8A2-485B-9D6E-C1051AEA8180}"
 EndProject
@@ -48,7 +48,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pedido.Api", "src
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{208D9936-99DD-41D9-B5FC-A8BF135A7D5F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.WebAPI.Core", "src\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj", "{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.WebAPI.Core", "src\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj", "{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
