@@ -1,10 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "mCzLHmxt2mSqZhAeqPk7AbO8DB2HScXYCm6Fw9w4lL6X7ynyClVj2exORztEG4hMzByzH4QXYoJPCqHhEj90Lg==",
+  "dgSpecHash": "Q+JrbOXsXmgYidK0FEPVQDQtH0lHZa5jyur8uBlQzYlPiDIOgSjYV8HZdtbtvkBhLWKuP+l87fzCiRlUVSaSBw==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Catalogo.Api\\Loja.Back.Catalogo.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.data.sqlclient\\2.0.1\\microsoft.data.sqlclient.2.0.1.nupkg.sha512",

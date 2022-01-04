@@ -63,3 +63,5 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\Loja.Back.WebAPI.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\Loja.Back.WebAPI.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\MediatR.dll

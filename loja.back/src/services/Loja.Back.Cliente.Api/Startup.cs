@@ -1,5 +1,6 @@
 using Loja.Back.Clientes.Api.Configuration;
 using Loja.Back.WebAPI.Core.Identitdade;
+using MediatR;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -35,6 +36,8 @@ namespace Loja.Back.Clientes.Api
             services.AddJwtConfiguration(Configuration);
 
             services.AddSwaggerConfiguration();
+
+            services.AddMediatR(typeof(Startup));
 
             services.RegisterServices();
         }

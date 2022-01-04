@@ -63,3 +63,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\ref\Loja.Back.Clientes.Api.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.genruntimeconfig.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\MediatR.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
