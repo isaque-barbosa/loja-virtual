@@ -1,5 +1,7 @@
-﻿using Loja.Back.Catalogo.Api.Models;
+﻿using FluentValidation.Results;
+using Loja.Back.Catalogo.Api.Models;
 using Loja.Back.Core.Data;
+using Loja.Back.Core.Messages;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,6 +18,9 @@ namespace Loja.Back.Catalogo.Api.Data
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Ignore<ValidationResult>();
+            modelBuilder.Ignore<Event>();
+
             foreach (var property in modelBuilder.Model.GetEntityTypes().
                 SelectMany(x => x.GetProperties().Where(y => y.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");

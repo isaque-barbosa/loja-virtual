@@ -1,8 +1,6 @@
-﻿using Loja.Back.Core.Messages;
+﻿using FluentValidation;
+using Loja.Back.Core.Messages;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja.Back.Clientes.Api.Application.Commands
 {
@@ -20,6 +18,36 @@ namespace Loja.Back.Clientes.Api.Application.Commands
             Nome = nome;
             Email = email;
             Cpf = cpf;
+        }
+
+        public override bool EhValido()
+        {
+            ValidationResult = new RegistrarClienteValidation().Validate(this);
+            return ValidationResult.IsValid;
+        }
+    }
+
+    public class RegistrarClienteValidation : AbstractValidator<RegistrarClienteCommand>
+    {
+        public RegistrarClienteValidation()
+        {
+            RuleFor(x => x.Id).NotEqual(Guid.Empty).WithMessage("Id do Cliente inválido.");
+
+            RuleFor(x => x.Nome).NotEmpty().WithMessage("O Nome do Cliente não foi informado.");
+
+            RuleFor(x => x.Cpf).Must(TerCpfValido).WithMessage("O CPF informado não é válido.");
+
+            RuleFor(x => x.Email).Must(TerEmailValido).WithMessage("O E-mail informado não é válido.");
+        }
+
+        protected static bool TerCpfValido(string cpf)
+        {
+            return Core.DomainObjects.Cpf.Validar(cpf);
+        }
+
+        public static bool TerEmailValido(string email)
+        {
+            return Core.DomainObjects.Email.Validar(email);
         }
     }
 }

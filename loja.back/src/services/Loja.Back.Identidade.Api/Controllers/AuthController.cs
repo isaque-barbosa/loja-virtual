@@ -1,4 +1,5 @@
-﻿using Loja.Back.WebAPI.Core.Identitdade;
+﻿using Loja.Back.WebAPI.Core.Controllers;
+using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Options;

@@ -1,8 +1,5 @@
 ﻿using Loja.Back.Core.DomainObjects;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja.Back.Clientes.Api.Models
 {

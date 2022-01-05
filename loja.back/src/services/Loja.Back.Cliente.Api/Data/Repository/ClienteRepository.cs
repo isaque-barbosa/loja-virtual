@@ -1,9 +1,7 @@
 ﻿using Loja.Back.Clientes.Api.Models;
 using Loja.Back.Core.Data;
 using Microsoft.EntityFrameworkCore;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Loja.Back.Clientes.Api.Data.Repository

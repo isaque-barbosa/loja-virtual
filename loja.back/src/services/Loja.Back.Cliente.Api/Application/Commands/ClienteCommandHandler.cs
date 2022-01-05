@@ -1,10 +1,8 @@
 ﻿using FluentValidation.Results;
+using Loja.Back.Clientes.Api.Application.Events;
 using Loja.Back.Clientes.Api.Models;
 using Loja.Back.Core.Messages;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -27,13 +25,15 @@ namespace Loja.Back.Clientes.Api.Application.Commands
 
             var clienteExistente = await _clienteRepository.ObterPorCpf(cliente.Cpf.Numero);
 
-            if(cliente is not null)
+            if (cliente is not null)
             {
                 AdicionarErro("Este CPF já está em uso.");
                 return ValidationResult;
             }
 
             _clienteRepository.Adicionar(cliente);
+
+            cliente.AdicionarEvento(new ClienteRegistradoEvent(message.Id, message.Nome, message.Email, message.Cpf));
 
             return await PersistirDados(_clienteRepository.UnitOfWork);
         }

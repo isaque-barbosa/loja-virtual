@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc.ModelBinding;
 using System.Collections.Generic;
 using System.Linq;
 
-namespace Loja.Back.Identidade.Api.Controllers
+namespace Loja.Back.WebAPI.Core.Controllers
 {
     [ApiController]
     public abstract class MainController : Controller

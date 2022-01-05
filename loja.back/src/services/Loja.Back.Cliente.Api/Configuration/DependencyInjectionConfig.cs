@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
 using Loja.Back.Clientes.Api.Application.Commands;
+using Loja.Back.Clientes.Api.Application.Events;
 using Loja.Back.Clientes.Api.Data;
 using Loja.Back.Clientes.Api.Data.Repository;
 using Loja.Back.Clientes.Api.Models;
@@ -17,7 +18,7 @@ namespace Loja.Back.Clientes.Api.Configuration
 
             services.AddScoped<IRequestHandler<RegistrarClienteCommand, ValidationResult>, ClienteCommandHandler>();
 
-            //services.AddScoped<INotificationHandler<ClienteRegistradoEvent>, ClienteEventHandler>();
+            services.AddScoped<INotificationHandler<ClienteRegistradoEvent>, ClienteEventHandler>();
 
             services.AddScoped<IClienteRepository, ClienteRepository>();
 

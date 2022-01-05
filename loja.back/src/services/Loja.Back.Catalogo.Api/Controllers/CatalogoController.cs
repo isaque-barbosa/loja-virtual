@@ -1,4 +1,5 @@
 ﻿using Loja.Back.Catalogo.Api.Models;
+using Loja.Back.WebAPI.Core.Controllers;
 using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
@@ -8,9 +9,8 @@ using System.Threading.Tasks;
 
 namespace Loja.Back.Catalogo.Api.Controllers
 {
-    [ApiController]
     [Authorize]
-    public class CatalogoController : Controller
+    public class CatalogoController : MainController
     {
         private readonly IProdutoRepository _produtoRepository;
 
