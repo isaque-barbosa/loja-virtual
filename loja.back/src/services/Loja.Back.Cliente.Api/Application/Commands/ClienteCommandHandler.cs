@@ -25,7 +25,7 @@ namespace Loja.Back.Clientes.Api.Application.Commands
 
             var clienteExistente = await _clienteRepository.ObterPorCpf(cliente.Cpf.Numero);
 
-            if (cliente is not null)
+            if (clienteExistente is not null)
             {
                 AdicionarErro("Este CPF já está em uso.");
                 return ValidationResult;

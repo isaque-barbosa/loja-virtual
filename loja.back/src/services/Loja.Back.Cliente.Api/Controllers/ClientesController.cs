@@ -19,7 +19,9 @@ namespace Loja.Back.Clientes.Api.Controllers
         [HttpGet("clientes")]
         public async Task<IActionResult> Index()
         {
-            var resultado = await _mediatorHandler.EnviarComando(new RegistrarClienteCommand(Guid.NewGuid(), "Isaque", "isaque@teste.com", "77373959032"));
+            var resultado = await _mediatorHandler
+                                        .EnviarComando(new RegistrarClienteCommand(
+                                            Guid.NewGuid(), "Isaque", "isaque@teste.com", "77373959032"));
 
             return CustomResponse(resultado);
         }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ZJjuKAk7w4/cQyXS5hMYMtNVzaIJ99/2paFEGBBv/8GLu+zQbNhEr2dK/tL7OxcxjM++LDmvmkVM+qrc6mIsCw==",
+  "dgSpecHash": "DLdN79GNoTqbpon7HWOR6B8qiF7216HDr6TKVtI1DIg81vrwz8JfkEqWrxBBcOrTpvclgxe39yCakfZZas4wCg==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.7.1\\microsoft.identitymodel.jsonwebtokens.6.7.1.nupkg.sha512",

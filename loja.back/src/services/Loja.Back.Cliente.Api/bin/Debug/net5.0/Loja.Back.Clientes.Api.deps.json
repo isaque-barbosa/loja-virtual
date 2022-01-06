@@ -1350,6 +1350,7 @@
       },
       "Loja.Back.WebAPI.Core/1.0.0": {
         "dependencies": {
+          "FluentValidation": "10.3.6",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "5.0.13"
         },
         "runtime": {
