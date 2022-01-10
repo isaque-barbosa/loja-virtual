@@ -1,4 +1,6 @@
-﻿using Loja.Back.WebAPI.Core.Controllers;
+﻿using EasyNetQ;
+using Loja.Back.Core.Messages.Integration;
+using Loja.Back.WebAPI.Core.Controllers;
 using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -22,31 +24,36 @@ namespace Loja.Back.Identidade.Api.Controllers
         private readonly UserManager<IdentityUser> _userManager;
         private readonly AppSettings _appSettings;
 
+        private IBus _bus;
+
         public AuthController(SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings)
+            UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings, IBus bus)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appSettings = appSettings.Value;
+            _bus = bus;
         }
 
         [HttpPost("nova-conta")]
-        public async Task<IActionResult> Registrar(UsuarioRegistro model)
+        public async Task<IActionResult> Registrar(UsuarioRegistro usuarioRegistro)
         {
             if (!ModelState.IsValid) return CustomResponse(ModelState);
 
             var user = new IdentityUser
             {
-                UserName = model.Email,
-                Email = model.Email,
+                UserName = usuarioRegistro.Email,
+                Email = usuarioRegistro.Email,
                 EmailConfirmed = true
             };
 
-            var result = await _userManager.CreateAsync(user, model.Senha);
+            var result = await _userManager.CreateAsync(user, usuarioRegistro.Senha);
 
             if (result.Succeeded)
             {
-                return CustomResponse(await GerarJwt(model.Email));
+                var sucesso = await RegistrarCliente(usuarioRegistro);
+
+                return CustomResponse(await GerarJwt(usuarioRegistro.Email));
             }
 
             foreach (var error in result.Errors)
@@ -55,6 +62,19 @@ namespace Loja.Back.Identidade.Api.Controllers
             }
 
             return CustomResponse();
+        }
+
+        private async Task<ResponseMessage> RegistrarCliente(UsuarioRegistro usuarioRegistro)
+        {
+            var usuario = await _userManager.FindByEmailAsync(usuarioRegistro.Email);
+            var usuarioRegistrado = new UsuarioRegistradoIntegrationEvent(
+                                            Guid.Parse(usuario.Id), usuarioRegistro.Nome, usuarioRegistro.Email, usuarioRegistro.Cpf);
+            
+            _bus = RabbitHutch.CreateBus("host=localhost:5672");
+
+            var sucesso = await _bus.Rpc.RequestAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(usuarioRegistrado);
+
+            return sucesso;
         }
 
         [HttpPost("autenticar")]
