@@ -27,12 +27,11 @@ namespace Loja.Back.Identidade.Api.Controllers
         private IBus _bus;
 
         public AuthController(SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings, IBus bus)
+            UserManager<IdentityUser> userManager, IOptions<AppSettings> appSettings)
         {
             _signInManager = signInManager;
             _userManager = userManager;
             _appSettings = appSettings.Value;
-            _bus = bus;
         }
 
         [HttpPost("nova-conta")]
