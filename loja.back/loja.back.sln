@@ -50,6 +50,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{20
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.WebAPI.Core", "src\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj", "{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MessageBus", "MessageBus", "{2FFE2DB1-3F02-4D0C-BFE2-7582C1C2AD4E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.MessageBus", "src\building blocks\Loja.Back.MessageBus\Loja.Back.MessageBus.csproj", "{95971D8E-62D2-49AA-9250-40FAD5516907}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -92,6 +96,10 @@ Global
 		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95971D8E-62D2-49AA-9250-40FAD5516907}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95971D8E-62D2-49AA-9250-40FAD5516907}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95971D8E-62D2-49AA-9250-40FAD5516907}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95971D8E-62D2-49AA-9250-40FAD5516907}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -118,6 +126,8 @@ Global
 		{3D26D652-1C97-4072-B793-C3A877B5E399} = {BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9}
 		{208D9936-99DD-41D9-B5FC-A8BF135A7D5F} = {A605EE49-698A-42FD-89D1-E0B28B848F9E}
 		{76E7EBB8-4B8A-4A33-91A8-1B2BB53AA4B6} = {208D9936-99DD-41D9-B5FC-A8BF135A7D5F}
+		{2FFE2DB1-3F02-4D0C-BFE2-7582C1C2AD4E} = {A605EE49-698A-42FD-89D1-E0B28B848F9E}
+		{95971D8E-62D2-49AA-9250-40FAD5516907} = {2FFE2DB1-3F02-4D0C-BFE2-7582C1C2AD4E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2EB0A6-117C-4167-9BCB-CD04CB936A71}

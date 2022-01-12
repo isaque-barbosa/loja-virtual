@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qcIKMY76NmSbFo0GrsPUAcP2+nx+4vTK1rIE7rUQLZQxBC0VXCULgkL8sZ5f84Y+Iyf+vcnhNL6lw+6gJ2ntAw==",
+  "dgSpecHash": "i75ah6vGcMPC7zHmZs0f2PDBGmR0np+aua12FVsuyIjHeWEBced3scqh/fDUdi5oOegFvo/FiNYxj/BleJebvg==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Pagamento.Api\\Loja.Back.Pagamento.Api.csproj",
   "expectedPackageFiles": [
