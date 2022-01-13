@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TNgas9TX8pZ2Oeay7j7yo6hJG3jX8hmdI1rBdRHR7SQs6Y9l03gcuZhR45W0fZNg/sAfXBAPJQvNUYZNlliezA==",
+  "dgSpecHash": "aC4LBCIcRlapRsfbT9/6YzRG6Io2fQ72g3tA/sXDKAmYivQ2tIlzpUJuQWlnU+AFtT66UHHTA/shJLYAXkjGzA==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Cliente.Api\\Loja.Back.Clientes.Api.csproj",
   "expectedPackageFiles": [
@@ -42,6 +42,7 @@
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\polly\\7.2.2\\polly.7.2.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",

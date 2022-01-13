@@ -571,6 +571,15 @@
           "lib/netstandard2.0/Newtonsoft.Json.dll": {}
         }
       },
+      "Polly/7.2.2": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/Polly.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Polly.dll": {}
+        }
+      },
       "RabbitMQ.Client/6.2.1": {
         "type": "package",
         "dependencies": {
@@ -1627,13 +1636,30 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "MediatR": "9.0.0"
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "compile": {
           "bin/placeholder/Loja.Back.Core.dll": {}
         },
         "runtime": {
           "bin/placeholder/Loja.Back.Core.dll": {}
+        }
+      },
+      "Loja.Back.MessageBus/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "EasyNetQ": "6.3.1",
+          "Loja.Back.Core": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "5.0.0",
+          "Polly": "7.2.2"
+        },
+        "compile": {
+          "bin/placeholder/Loja.Back.MessageBus.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Loja.Back.MessageBus.dll": {}
         }
       },
       "Loja.Back.WebAPI.Core/1.0.0": {
@@ -2667,6 +2693,29 @@
         "newtonsoft.json.12.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "Polly/7.2.2": {
+      "sha512": "E6CeKyS513j7taKAq4q2MESDBvzuzWnR1rQ2Y2zqJvpiVtKMm699Aubb20MUPBDmb0Ov8PmcLHTCVFdCjoy2kA==",
+      "type": "package",
+      "path": "polly/7.2.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "lib/net461/Polly.dll",
+        "lib/net461/Polly.pdb",
+        "lib/net461/Polly.xml",
+        "lib/net472/Polly.dll",
+        "lib/net472/Polly.pdb",
+        "lib/net472/Polly.xml",
+        "lib/netstandard1.1/Polly.dll",
+        "lib/netstandard1.1/Polly.pdb",
+        "lib/netstandard1.1/Polly.xml",
+        "lib/netstandard2.0/Polly.dll",
+        "lib/netstandard2.0/Polly.pdb",
+        "lib/netstandard2.0/Polly.xml",
+        "polly.7.2.2.nupkg.sha512",
+        "polly.nuspec"
       ]
     },
     "RabbitMQ.Client/6.2.1": {
@@ -6055,6 +6104,11 @@
       "path": "../../building blocks/Loja.Back.Core/Loja.Back.Core.csproj",
       "msbuildProject": "../../building blocks/Loja.Back.Core/Loja.Back.Core.csproj"
     },
+    "Loja.Back.MessageBus/1.0.0": {
+      "type": "project",
+      "path": "../../building blocks/Loja.Back.MessageBus/Loja.Back.MessageBus.csproj",
+      "msbuildProject": "../../building blocks/Loja.Back.MessageBus/Loja.Back.MessageBus.csproj"
+    },
     "Loja.Back.WebAPI.Core/1.0.0": {
       "type": "project",
       "path": "../../building blocks/Loja.Back.WebAPI.Core/Loja.Back.WebAPI.Core.csproj",
@@ -6063,8 +6117,8 @@
   },
   "projectFileDependencyGroups": {
     "net5.0": [
-      "EasyNetQ >= 6.3.1",
       "Loja.Back.Core >= 1.0.0",
+      "Loja.Back.MessageBus >= 1.0.0",
       "Loja.Back.WebAPI.Core >= 1.0.0",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 5.0.13",
       "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 5.0.13",
@@ -6108,6 +6162,9 @@
             "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj": {
               "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj"
             },
+            "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj": {
+              "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj"
+            },
             "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj": {
               "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj"
             }
@@ -6124,10 +6181,6 @@
       "net5.0": {
         "targetAlias": "net5.0",
         "dependencies": {
-          "EasyNetQ": {
-            "target": "Package",
-            "version": "[6.3.1, )"
-          },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[5.0.13, )"

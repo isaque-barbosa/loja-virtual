@@ -63,7 +63,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\obj\Debug\net5.0\Loja.Back.Identidade.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.WebAPI.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.WebAPI.Core.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\FluentValidation.dll
@@ -73,3 +72,7 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Polly.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\bin\Debug\net5.0\Loja.Back.MessageBus.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Identidade.Api\obj\Debug\net5.0\Loja.Back.Identidade.Api.MvcApplicationPartsAssemblyInfo.cs

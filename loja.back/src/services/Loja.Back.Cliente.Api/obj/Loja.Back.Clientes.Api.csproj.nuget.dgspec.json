@@ -47,6 +47,82 @@
             "MediatR": {
               "target": "Package",
               "version": "[9.0.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj",
+        "projectName": "Loja.Back.MessageBus",
+        "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj",
+        "packagesPath": "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\isaqueBarbosa\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj": {
+                "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "EasyNetQ": {
+              "target": "Package",
+              "version": "[6.3.1, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[7.2.2, )"
             }
           },
           "imports": [
@@ -159,6 +235,9 @@
               "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj": {
                 "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj"
               },
+              "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj": {
+                "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj"
+              },
               "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj": {
                 "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.WebAPI.Core\\Loja.Back.WebAPI.Core.csproj"
               }
@@ -175,10 +254,6 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
-            "EasyNetQ": {
-              "target": "Package",
-              "version": "[6.3.1, )"
-            },
             "MediatR.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
               "version": "[9.0.0, )"

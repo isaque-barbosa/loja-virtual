@@ -1500,7 +1500,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "MediatR": "9.0.0"
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "compile": {
           "bin/placeholder/Loja.Back.Core.dll": {}

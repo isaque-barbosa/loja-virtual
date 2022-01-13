@@ -8,7 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EasyNetQ" Version="6.3.1" />
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="9.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="5.0.13" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="5.0.13" />
@@ -29,6 +28,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\building blocks\Loja.Back.Core\Loja.Back.Core.csproj" />
+    <ProjectReference Include="..\..\building blocks\Loja.Back.MessageBus\Loja.Back.MessageBus.csproj" />
     <ProjectReference Include="..\..\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj" />
   </ItemGroup>
 

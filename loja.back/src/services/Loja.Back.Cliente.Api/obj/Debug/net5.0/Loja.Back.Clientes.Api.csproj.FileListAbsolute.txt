@@ -3,7 +3,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.AssemblyInfoInputs.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.AssemblyInfo.cs
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.csproj.CoreCompileInputs.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\obj\Debug\net5.0\Loja.Back.Clientes.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\appsettings.json
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\appsettings.Development.json
@@ -69,3 +68,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\EasyNetQ.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\RabbitMQ.Client.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\Polly.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Cliente.Api\bin\Debug\net5.0\Loja.Back.MessageBus.pdb

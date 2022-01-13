@@ -1,0 +1,15 @@
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.csproj.AssemblyReference.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.AssemblyInfoInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.AssemblyInfo.cs
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.csproj.CoreCompileInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\Loja.Back.MessageBus.deps.json
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\ref\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\Loja.Back.MessageBus.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\Loja.Back.Core.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\bin\Debug\net5.0\Loja.Back.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.csproj.CopyComplete
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\ref\Loja.Back.MessageBus.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.MessageBus\obj\Debug\net5.0\Loja.Back.MessageBus.pdb

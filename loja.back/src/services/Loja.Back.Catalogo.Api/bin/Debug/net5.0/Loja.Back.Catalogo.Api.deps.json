@@ -1323,7 +1323,8 @@
       "Loja.Back.Core/1.0.0": {
         "dependencies": {
           "FluentValidation": "10.3.6",
-          "MediatR": "9.0.0"
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
         },
         "runtime": {
           "Loja.Back.Core.dll": {}

@@ -1,12 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Yp4jebonMltV7FJ2Gx02tZJXJsANi5Su0YnNWBoe4mqrX14nG9w1IOayzO+ycy9ouAvC0Xu6p7f/HxE1XkHVjw==",
+  "dgSpecHash": "WgFFOBMcTHpctm1cbM0pj8pxLDHvBYoX/TikrjXKslTqy24HcXEXY/1b+7RtboZDsgbWxUMvjm9Kg7Xthmz6OQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.MessageBus\\Loja.Back.MessageBus.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\easynetq\\6.3.1\\easynetq.6.3.1.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\polly\\7.2.2\\polly.7.2.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\rabbitmq.client\\6.2.1\\rabbitmq.client.6.2.1.nupkg.sha512",
