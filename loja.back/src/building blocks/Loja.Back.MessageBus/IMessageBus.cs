@@ -1,4 +1,5 @@
-﻿using Loja.Back.Core.Messages.Integration;
+﻿using EasyNetQ;
+using Loja.Back.Core.Messages.Integration;
 using System;
 using System.Threading.Tasks;
 
@@ -6,6 +7,9 @@ namespace Loja.Back.MessageBus
 {
     public interface IMessageBus : IDisposable
     {
+        bool IsConnected { get; }
+        IAdvancedBus AdvancedBus { get; }
+
         void Publish<T>(T message) where T : IntegrationEvent;
 
         Task PublishAsync<T>(T message) where T : IntegrationEvent;
@@ -29,7 +33,5 @@ namespace Loja.Back.MessageBus
         Task<IDisposable> RespondAsync<TRequest, TResponse>(Func<TRequest, Task<TResponse>> responder)
             where TRequest : IntegrationEvent
             where TResponse : ResponseMessage;
-
-        bool IsConnected { get; }
     }
 }
