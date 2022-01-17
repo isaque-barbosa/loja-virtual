@@ -1,4 +1,5 @@
-﻿using Loja.Back.WebAPI.Core.Identitdade;
+﻿using Loja.Back.Carrinho.Api.Data;
+using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -11,6 +12,9 @@ namespace Loja.Back.Carrinho.Api.Configuration
     {
         public static void AddApiConfiguration(this IServiceCollection services, IConfiguration configuration)
         {
+            services.AddDbContext<CarrinhoContext>(options =>
+                        options.UseSqlServer(configuration.GetConnectionString("DefaultConnection")));
+
             services.AddControllers();
 
             services.AddCors(options =>
