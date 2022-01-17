@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
 
 namespace Loja.Back.Carrinho.Api.Model
 {
@@ -20,7 +19,7 @@ namespace Loja.Back.Carrinho.Api.Model
             ClienteId = clienteId;
         }
 
-        public CarrinhoCliente() {}
+        public CarrinhoCliente() { }
 
         internal void CalcularValorCarrinho()
         {
@@ -43,7 +42,7 @@ namespace Loja.Back.Carrinho.Api.Model
 
             item.AssociarCarrinho(Id);
 
-            if(CarrinhoItemExistente(item))
+            if (CarrinhoItemExistente(item))
             {
                 var itemExistente = ObterPorProdutoId(item.ProdutoId);
                 itemExistente.AdicionarUnidades(item.Quantidade);

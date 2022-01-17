@@ -6,8 +6,6 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Loja.Back.Carrinho.Api.Controllers
@@ -35,7 +33,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
         {
             var carrinho = await ObterCarrinhoCliente();
 
-            if(carrinho == null)
+            if (carrinho == null)
             {
                 ManipularNovoCarrinho(item);
             }
@@ -67,7 +65,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
 
             carrinho.AdicionarItem(item);
 
-            if(produtoItemExistente)
+            if (produtoItemExistente)
             {
                 _context.CarrinhoItens.Update(carrinho.ObterPorProdutoId(item.ProdutoId));
             }

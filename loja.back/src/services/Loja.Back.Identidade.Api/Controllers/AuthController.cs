@@ -53,7 +53,7 @@ namespace Loja.Back.Identidade.Api.Controllers
             {
                 var clienteResult = await RegistrarCliente(usuarioRegistro);
 
-                if(!clienteResult.ValidationResult.IsValid)
+                if (!clienteResult.ValidationResult.IsValid)
                 {
                     await _userManager.DeleteAsync(user);
 
@@ -170,7 +170,7 @@ namespace Loja.Back.Identidade.Api.Controllers
             {
                 return await _bus.RequestAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(usuarioRegistrado);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 await _userManager.DeleteAsync(usuario);
                 throw;
