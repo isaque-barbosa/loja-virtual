@@ -44,12 +44,12 @@ namespace Loja.Back.Carrinho.Api.Model
 
         internal bool EhValido()
         {
-            return new ItemPedidoValidation().Validate(this).IsValid;
+            return new ItemCarrinhoValidation().Validate(this).IsValid;
         }
 
-        public class ItemPedidoValidation : AbstractValidator<CarrinhoItem>
+        public class ItemCarrinhoValidation : AbstractValidator<CarrinhoItem>
         {
-            public ItemPedidoValidation()
+            public ItemCarrinhoValidation()
             {
                 RuleFor(x => x.ProdutoId)
                     .NotEqual(Guid.Empty)
@@ -61,15 +61,15 @@ namespace Loja.Back.Carrinho.Api.Model
 
                 RuleFor(x => x.Quantidade)
                     .GreaterThan(0)
-                    .WithMessage("A quantidade mínima de um Item é 1.");
+                    .WithMessage(item => $"A quantidade mínima para o {item.Nome} é 1.");
 
                 RuleFor(x => x.Quantidade)
                     .LessThan(CarrinhoCliente.MAX_QUANTIDADE_ITEM)
-                    .WithMessage($"A quantidade máxima de um Item é {CarrinhoCliente.MAX_QUANTIDADE_ITEM}.");
+                    .WithMessage(item => $"A quantidade máxima do {item.Nome} é {CarrinhoCliente.MAX_QUANTIDADE_ITEM}.");
 
                 RuleFor(x => x.Valor)
                     .GreaterThan(0)
-                    .WithMessage("O Valor do Item precisa ser maior do que 0.");
+                    .WithMessage(item => $"O Valor do {item.Nome} precisa ser maior do que 0.");
             }
         }
     }

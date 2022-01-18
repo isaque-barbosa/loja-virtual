@@ -1,4 +1,5 @@
-﻿using Loja.Back.Carrinho.Api.Model;
+﻿using FluentValidation.Results;
+using Loja.Back.Carrinho.Api.Model;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
@@ -20,6 +21,8 @@ namespace Loja.Back.Carrinho.Api.Data
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
                 property.SetColumnType("varchar(100)");
+
+            modelBuilder.Ignore<ValidationResult>();
 
             modelBuilder.Entity<CarrinhoCliente>()
                 .HasIndex(x => x.ClienteId)
