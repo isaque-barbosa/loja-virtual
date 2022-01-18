@@ -9,7 +9,6 @@ using System.Threading.Tasks;
 
 namespace Loja.Back.Catalogo.Api.Controllers
 {
-    [Authorize]
     public class CatalogoController : MainController
     {
         private readonly IProdutoRepository _produtoRepository;
@@ -25,7 +24,6 @@ namespace Loja.Back.Catalogo.Api.Controllers
             return await _produtoRepository.ObterTodos();
         }
 
-        [ClaimsAuthorizeAttibute("Catalogo", "Ler")]
         [HttpGet("catalogo/produtos/{id}")]
         public async Task<Produto> ProdutoDetalhe(Guid id)
         {
