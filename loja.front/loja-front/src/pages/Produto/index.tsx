@@ -29,7 +29,33 @@ export const Produto: React.FC = () => {
 
     return(
         <MainContent>
+            <div className="card mb-3">
+                <div className="row g-0">
 
+                    <div className="col-md-4">
+                        <img src="https://a-static.mlcdn.com.br/1500x1500/camisa-social-masculina-manga-longa-slim-botoes-duplo-azul-ceu-us-born/estilomodas/5245901416/a06bff7439beadf189edda14611bff20.jpg"
+                        className="card-img-top"
+                        alt={data.descricao} />
+                    </div>
+
+                    <div className="col-md-8">
+                        <div className="card-body">
+                            
+                            <h5 className="card-title">
+                                {data.nome}
+                            </h5>
+                            <p className="card-text">
+                                {data.descricao}
+                            </p>
+                            <p className="card-text">
+                                {CurrencyMask.format(data.valor)}
+                            </p>
+                            
+                        </div>
+                    </div>
+
+                </div>                
+            </div>
         </MainContent>
     );
 };

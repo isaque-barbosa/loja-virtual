@@ -6,8 +6,6 @@ import { CurrencyMask } from "../../services/mask";
 import { IProduto } from "../Produto/index";
 import { catalogoUrl } from "../../services/api";
 
-import { Card, Container, Column, Row } from "./style";
-
 export const Home: React.FC = () => {
     const { data } = useFetch<IProduto[]>(`${catalogoUrl}/catalogo/produtos`);
     
@@ -17,21 +15,29 @@ export const Home: React.FC = () => {
 
     return(
         <MainContent>
-            <Row className="row">
+            <div className="row">
                 {data.map(produto => (
-                    <Column key={produto.id} className="column col-md-4">
-                        <Link to={`/produtos/${produto.id}`}>
-                            <Card className="card" >
-                                <img src="https://a-static.mlcdn.com.br/1500x1500/camisa-social-masculina-manga-longa-slim-botoes-duplo-azul-ceu-us-born/estilomodas/5245901416/a06bff7439beadf189edda14611bff20.jpg" alt={produto.descricao} />
-                                <Container className="container">
-                                    <h4><b>{produto.nome}</b></h4>
-                                    <p>{CurrencyMask.format(produto.valor)}</p>
-                                </Container>
-                            </Card>
-                        </Link>
-                    </Column>
+                    <div className="col-sm-2">
+                        <div className="card">
+                            <Link to={`/produtos/${produto.id}`}>
+                                <img src="https://a-static.mlcdn.com.br/1500x1500/camisa-social-masculina-manga-longa-slim-botoes-duplo-azul-ceu-us-born/estilomodas/5245901416/a06bff7439beadf189edda14611bff20.jpg" className="card-img-top" alt={produto.descricao} />
+                            </Link>
+                            <div className="card-body">
+                                <h5 className="card-title">
+                                    {produto.nome}
+                                </h5>
+                                <p className="card-text">
+                                    {CurrencyMask.format(produto.valor)}
+                                </p>
+                                
+                                <Link to={`/produtos/${produto.id}`} className="btn btn-primary pull-right">
+                                    Comprar
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
                 ))}
-            </Row>
+            </div>
         </MainContent>
     );
 };
