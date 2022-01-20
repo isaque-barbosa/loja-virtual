@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
     margin: 3vh 0 0 0;
     left: 0;
     bottom: 0;
@@ -9,4 +9,24 @@
 }
 .footer p {
     padding: 5vh 0 2vh 0;
+} */
+
+.copyright {
+    background-color: rgba(0, 0, 0, 1);
+}
+
+.github {
+    background-color: #333333;
+}
+
+.linkedin {
+    background-color: #0082ca;
+}
+
+.google {
+    background-color: #dd4b39;
+}
+
+.info {
+    background-color: #04AA6D;
 }

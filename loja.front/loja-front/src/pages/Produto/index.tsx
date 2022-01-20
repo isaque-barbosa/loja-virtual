@@ -20,7 +20,7 @@ export interface IProduto {
 export const Produto: React.FC = () => {
     const { id } = useParams();
 
-    const { data } = useFetch<IProduto>(`${catalogoUrl}/catalogo/produtos/${id}`);
+    const { data } = useFetch<IProduto>(`${catalogoUrl}catalogo/produtos/${id}`);
 
     console.log(data);
     if(!data){

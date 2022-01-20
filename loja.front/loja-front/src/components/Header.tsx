@@ -8,20 +8,20 @@ import "../styles/nav.css";
 
 export function Header(){
 
-    // function abrirDropdown() {
-    //     document?.getElementById("myDropdown")?.classList.toggle("show");
-    // }
+    function abrirDropdown() {
+        document?.getElementById("myDropdown")?.classList.toggle("show");
+    }
 
-    // window.onclick = function(e) {
-    //     if(e.target instanceof Element){
-    //         if (!e?.target?.matches('.dropbtn')) {
-    //             var myDropdown = document.getElementById("myDropdown");
-    //             if (myDropdown?.classList.contains('show')) {
-    //                 myDropdown.classList.remove('show');
-    //             }
-    //         }
-    //     }
-    // }
+    window.onclick = function(e) {
+        if(e.target instanceof Element){
+            if (!e?.target?.matches('.dropbtn')) {
+                var myDropdown = document.getElementById("myDropdown");
+                if (myDropdown?.classList.contains('show')) {
+                    myDropdown.classList.remove('show');
+                }
+            }
+        }
+    }
 
     function IsActive(path: string){
         if(window.location.pathname === path) return "active"
@@ -75,22 +75,38 @@ export function Header(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-                    <div className="dropdown">
-                        <button className="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown button
-                        </button>
-                        <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><Link className="dropdown-item" to="#">Action</Link></li>
-                            <li><Link className="dropdown-item" to="#">Another action</Link></li>
-                            <li><Link className="dropdown-item" to="#">Something else here</Link></li>
-                        </ul>
-                    </div>
+                        
+                            {!isAuthenticated() && <li className="nav-item">
+                                                        <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/login">
+                                                            Entrar
+                                                        </Link>
+                                                    </li>}
+                            {isAuthenticated() && <div className="dropdown">
+                                <button className="btn btn-secondary dropdown-toggle dropbtn" onClick={abrirDropdown} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                    Olá, {user}!
+                                </button>
+                                <ul className="dropdown-menu" id="myDropdown" aria-labelledby="dropdownMenuButton1">
+                                    <li>
+                                        <Link className="dropdown-item" to="#">
+                                            Meu Perfil
+                                        </Link>
+                                    </li>
+                                    <li>
+                                        <Link className="dropdown-item" 
+                                            onClick={() => {logout(); window.location.reload();}}
+                                            to="#">
+                                                Sair
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>}
 
-                        <li className="nav-item">
-                            <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/carrinho">
-                                Carrinho
-                            </Link>
-                        </li>
+                                <li className="nav-item">
+                                    <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/carrinho">
+                                        Carrinho
+                                    </Link>
+                                </li>
+                        
                     </ul>
                 </div>
             </div>

@@ -7,10 +7,14 @@ import { IProduto } from "../Produto/index";
 import { catalogoUrl } from "../../services/api";
 
 export const Home: React.FC = () => {
-    const { data } = useFetch<IProduto[]>(`${catalogoUrl}/catalogo/produtos`);
+    const { data } = useFetch<IProduto[]>(`${catalogoUrl}catalogo/produtos`);
     
     if(!data){
-        return <p>Carregando...</p>
+        return(
+            <MainContent>
+                <p>Carregando...</p>
+            </MainContent>
+        );
     }
 
     return(
