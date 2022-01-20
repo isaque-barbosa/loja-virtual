@@ -1,7 +1,5 @@
 ﻿using Loja.Back.Catalogo.Api.Models;
 using Loja.Back.WebAPI.Core.Controllers;
-using Loja.Back.WebAPI.Core.Identitdade;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;

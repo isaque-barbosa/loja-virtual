@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 
 import Logo from "../images/logo.svg";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
 import { isAuthenticated, logout, getEmail } from "../services/auth";
 
@@ -75,12 +77,23 @@ export function Header(){
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+
+                            <li className="nav-item position-relative me-3">
+                                <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/carrinho">
+                                    <FontAwesomeIcon style={{width: 50, height: 19}} icon={faShoppingCart} />
+                                </Link>
+                                <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0
+                                    <span className="visually-hidden">unread messages</span>
+                                </span>
+                            </li>
                         
                             {!isAuthenticated() && <li className="nav-item">
                                                         <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/login">
                                                             Entrar
                                                         </Link>
                                                     </li>}
+
                             {isAuthenticated() && <div className="dropdown">
                                 <button className="btn btn-secondary dropdown-toggle dropbtn" onClick={abrirDropdown} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                                     Olá, {user}!
@@ -101,12 +114,6 @@ export function Header(){
                                 </ul>
                             </div>}
 
-                                <li className="nav-item">
-                                    <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/carrinho">
-                                        Carrinho
-                                    </Link>
-                                </li>
-                        
                     </ul>
                 </div>
             </div>

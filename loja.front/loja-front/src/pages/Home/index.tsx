@@ -3,8 +3,12 @@ import { MainContent } from "../../components/MainContent";
 
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
+import api from "../../services/api";
+
 import { IProduto } from "../Produto/index";
-import { catalogoUrl } from "../../services/api";
+import { Item } from "../Carrinho";
+
+import { catalogoUrl, carrinhoUrl } from "../../services/api";
 
 export const Home: React.FC = () => {
     const { data } = useFetch<IProduto[]>(`${catalogoUrl}catalogo/produtos`);
@@ -16,6 +20,24 @@ export const Home: React.FC = () => {
             </MainContent>
         );
     }
+
+    function comprar(item: Item) {
+        return (event: React.MouseEvent) => {
+            api.post(`${carrinhoUrl}carrinho`, item);
+            event.preventDefault();
+        }
+    };
+
+    function converter(produto: IProduto){
+        const item = {
+            produtoId: produto.id,
+            nome: produto.nome,
+            quantidade: 1,
+            valor: produto.valor
+        } as Item;
+        
+        return item;
+    };
 
     return(
         <MainContent>
@@ -34,9 +56,11 @@ export const Home: React.FC = () => {
                                     {CurrencyMask.format(produto.valor)}
                                 </p>
                                 
-                                <Link to={`/produtos/${produto.id}`} className="btn btn-primary pull-right">
+                                <button onClick={comprar(converter(produto))}
+                                      style={{width: "100%"}}
+                                      className="btn btn-primary">
                                     Comprar
-                                </Link>
+                                </button>
                             </div>
                         </div>
                     </div>

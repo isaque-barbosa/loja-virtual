@@ -9,11 +9,7 @@ namespace Loja.Back.MVC.Configuration
         public static void AddIdentityConfiguration(this IServiceCollection services)
         {
             services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
-                .AddCookie(options =>
-                {
-                    options.LoginPath = "/login";
-                    options.AccessDeniedPath = "/acesso-negado";
-                });
+                .AddCookie();
         }
 
         public static void UseIdentityConfiguration(this IApplicationBuilder app)

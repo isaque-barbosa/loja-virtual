@@ -5,12 +5,12 @@ import { useFetch } from "../../hooks/useFetch";
 
 import { carrinhoUrl } from "../../services/api";
 
-interface Carrinho {
+interface ICarrinho {
     valorTotal: number;
-    itens: Itens[];
+    itens: Item[];
 };
 
-interface Itens {
+export interface Item {
     produtoId: string;
     nome: string;
     quantidade: number;
@@ -19,7 +19,7 @@ interface Itens {
 }
 
 export const Carrinho: React.FC = () => {
-    const { data } = useFetch<Carrinho>(`${carrinhoUrl}carrinho`);
+    const { data } = useFetch<ICarrinho>(`${carrinhoUrl}carrinho`);
 
     console.log(data);
 

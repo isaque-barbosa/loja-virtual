@@ -29,10 +29,16 @@ namespace Loja.Back.Carrinho.Api.Controllers
             return await ObterCarrinhoCliente() ?? new CarrinhoCliente();
         }
 
-        [HttpPost("carrinho")]
+        [HttpPost("carrinho/adicionar-item")]
         public async Task<IActionResult> AdicionarItemCarrinho(CarrinhoItem item)
         {
             var carrinho = await ObterCarrinhoCliente();
+
+            //TODO
+            ///var produto = await _context.Catalogo.ObterProdutoPorId(item.ProdutoId);
+            ///item.Nome = produto.nome;
+            ///item.Valor = produto.Valor;
+            ///item.Imagem = produto.Imagem;
 
             if (carrinho == null)
             {
@@ -49,11 +55,15 @@ namespace Loja.Back.Carrinho.Api.Controllers
             await PersistirDados();
 
             return CustomResponse();
-        }        
+        }
 
-        [HttpPut("carrinho/{produtoId}")]
+        [HttpPut("carrinho/atualizar-item/{produtoId}")]
         public async Task<IActionResult> AtualizarItemCarrinho(Guid produtoId, CarrinhoItem item)
         {
+            //TODO
+            ///var produto = await _context.Catalogo.ObterProdutoPorId(item.ProdutoId);
+            ///if(produto is null) AdicionarErroProcessamento("Produto Inexistente.");
+
             var carrinho = await ObterCarrinhoCliente();
             var itemCarrinho = await ObterItemCarrinhoValidado(produtoId, carrinho, item);
 
@@ -72,7 +82,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
             return CustomResponse();
         }
 
-        [HttpDelete("carrinho/{produtoId}")]
+        [HttpDelete("carrinho/remover-item/{produtoId}")]
         public async Task<IActionResult> RemoverItemCarrinho(Guid produtoId)
         {
             var carrinho = await ObterCarrinhoCliente();
@@ -130,13 +140,13 @@ namespace Loja.Back.Carrinho.Api.Controllers
 
         private async Task<CarrinhoItem> ObterItemCarrinhoValidado(Guid produtoId, CarrinhoCliente carrinho, CarrinhoItem item = null)
         {
-            if(item is not null && produtoId != item.ProdutoId)
+            if (item is not null && produtoId != item.ProdutoId)
             {
                 AdicionarErroProcessamento("O Item não corresponde ao informado.");
                 return null;
             }
 
-            if(carrinho is null)
+            if (carrinho is null)
             {
                 AdicionarErroProcessamento("Carrinho não encontrado.");
                 return null;
@@ -145,7 +155,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
             var itemCarrinho = await _context.CarrinhoItens
                                         .FirstOrDefaultAsync(x => x.CarrinhoId == carrinho.Id && x.ProdutoId == produtoId);
 
-            if(itemCarrinho is null || !carrinho.CarrinhoItemExistente(itemCarrinho))
+            if (itemCarrinho is null || !carrinho.CarrinhoItemExistente(itemCarrinho))
             {
                 AdicionarErroProcessamento("O Item não está no carrinho.");
                 return null;

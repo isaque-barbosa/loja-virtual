@@ -5,6 +5,8 @@ import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
 import { catalogoUrl } from "../../services/api";
 
+import { CardBody, Button } from "./styles";
+
 export interface IProduto {
     id: string;
     nome: string;
@@ -39,7 +41,7 @@ export const Produto: React.FC = () => {
                     </div>
 
                     <div className="col-md-8">
-                        <div className="card-body">
+                        <CardBody className="card-body">
                             
                             <h5 className="card-title">
                                 {data.nome}
@@ -51,8 +53,12 @@ export const Produto: React.FC = () => {
                                 {CurrencyMask.format(data.valor)}
                             </p>
                             
-                        </div>
-                    </div>
+                        </CardBody>
+
+                        <Button className="btn btn-primary">
+                            Comprar
+                        </Button>
+                    </div>                   
 
                 </div>                
             </div>

@@ -14,7 +14,7 @@ export function Footer(){
                     {/* Google */}
                     <a
                         className="btn btn-primary btn-floating m-1 google"
-                        href="#!"
+                        href="mailto:isaque.barbosa@base2.com.br"
                         role="button"
                         ><FontAwesomeIcon icon={faGoogle} />
                     </a>
@@ -22,7 +22,7 @@ export function Footer(){
                     {/* Linkedin */}
                     <a
                         className="btn btn-primary btn-floating m-1 linkedin"
-                        href="#!"
+                        href="https://www.linkedin.com/in/isaque-oliveira-1b84311b3/"
                         role="button"
                         ><FontAwesomeIcon icon={faLinkedin} />
                     </a>
@@ -30,7 +30,7 @@ export function Footer(){
                     {/* Github */}
                     <a
                         className="btn btn-primary btn-floating m-1 github"
-                        href="#!"
+                        href="https://github.com/isaqueoliver"
                         role="button"
                         ><FontAwesomeIcon icon={faGithub} />
                     </a>
