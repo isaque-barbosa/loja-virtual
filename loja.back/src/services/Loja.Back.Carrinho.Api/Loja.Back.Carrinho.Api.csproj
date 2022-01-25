@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\building blocks\Loja.Back.Core\Loja.Back.Core.csproj" />
     <ProjectReference Include="..\..\building blocks\Loja.Back.WebAPI.Core\Loja.Back.WebAPI.Core.csproj" />
   </ItemGroup>
 

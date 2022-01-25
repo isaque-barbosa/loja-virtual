@@ -33,6 +33,7 @@
     ".NETCoreApp,Version=v5.0": {
       "Loja.Back.Carrinho.Api/1.0.0": {
         "dependencies": {
+          "Loja.Back.Core": "1.0.0",
           "Loja.Back.WebAPI.Core": "1.0.0",
           "Microsoft.EntityFrameworkCore": "5.0.13",
           "Microsoft.EntityFrameworkCore.Abstractions": "5.0.13",
@@ -347,6 +348,17 @@
             "assemblyVersion": "2.8.0.0",
             "fileVersion": "2.8.26.1919"
           }
+        }
+      },
+      "MediatR/9.0.0": {
+        "runtime": {
+          "lib/netstandard2.1/MediatR.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.0.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.1/MediatR.dll": {}
         }
       },
       "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.13": {
@@ -1306,6 +1318,19 @@
           "System.Threading": "4.3.0",
           "System.Xml.ReaderWriter": "4.3.0",
           "System.Xml.XmlDocument": "4.3.0"
+        }
+      },
+      "Loja.Back.Core/1.0.0": {
+        "dependencies": {
+          "FluentValidation": "10.3.6",
+          "MediatR": "9.0.0",
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
+        },
+        "runtime": {
+          "Loja.Back.Core.dll": {}
+        },
+        "compile": {
+          "Loja.Back.Core.dll": {}
         }
       },
       "Loja.Back.WebAPI.Core/1.0.0": {
@@ -3028,6 +3053,13 @@
       "path": "humanizer.core/2.8.26",
       "hashPath": "humanizer.core.2.8.26.nupkg.sha512"
     },
+    "MediatR/9.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-8b3UYNxegHVYcJMG2zH8wn+YqxLvXG+eMfj0cMCq/jTW72p6O3PCKMkrIv0mqyxdW7bA4gblsocw7n+/9Akg5g==",
+      "path": "mediatr/9.0.0",
+      "hashPath": "mediatr.9.0.0.nupkg.sha512"
+    },
     "Microsoft.AspNetCore.Authentication.JwtBearer/5.0.13": {
       "type": "package",
       "serviceable": true,
@@ -3713,6 +3745,11 @@
       "sha512": "sha512-MYoTCP7EZ98RrANESW05J5ZwskKDoN0AuZ06ZflnowE50LTpbR5yRg3tHckTVm5j/m47stuGgCrCHWePyHS70Q==",
       "path": "system.xml.xmlserializer/4.3.0",
       "hashPath": "system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    },
+    "Loja.Back.Core/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Loja.Back.WebAPI.Core/1.0.0": {
       "type": "project",

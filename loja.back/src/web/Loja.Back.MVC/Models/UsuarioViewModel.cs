@@ -12,7 +12,7 @@ namespace Loja.Back.MVC.Models
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         [DisplayName("CPF")]
-        [Cpf]
+        //[Cpf]
         public string Cpf { get; set; }
 
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
@@ -42,10 +42,15 @@ namespace Loja.Back.MVC.Models
 
     public class UsuarioRespostaLogin
     {
+        public UsuarioResposta UsuarioResposta { get; set; }
+        public ResponseResult ResponseResult { get; set; }
+    }
+
+    public class UsuarioResposta
+    {
         public string AccessToken { get; set; }
         public double ExpiresIn { get; set; }
         public UsuarioToken UsuarioToken { get; set; }
-        public ResponseResult ResponseResult { get; set; }
     }
 
     public class UsuarioToken

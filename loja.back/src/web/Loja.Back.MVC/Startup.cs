@@ -1,4 +1,5 @@
 using Loja.Back.MVC.Configuration;
+using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -32,6 +33,10 @@ namespace Loja.Back.MVC
             services.AddIdentityConfiguration();
 
             services.AddMvcConfiguration(Configuration);
+
+            //services.AddJwtConfiguration(Configuration);
+
+            services.AddSwaggerConfiguration();
 
             services.RegisterServices(Configuration);
         }

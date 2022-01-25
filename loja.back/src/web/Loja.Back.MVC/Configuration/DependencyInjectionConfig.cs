@@ -1,4 +1,5 @@
-﻿using Loja.Back.MVC.Services.Handlers;
+﻿using Loja.Back.MVC.Services;
+using Loja.Back.MVC.Services.Handlers;
 using Loja.Back.WebAPI.Core.Usuario;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc.DataAnnotations;
@@ -16,7 +17,7 @@ namespace Loja.Back.MVC.Configuration
     {
         public static void RegisterServices(this IServiceCollection services, IConfiguration configuration)
         {
-            services.AddSingleton<IValidationAttributeAdapterProvider, CpfValidationAttributeAdapterProvider>();
+            //services.AddSingleton<IValidationAttributeAdapterProvider, CpfValidationAttributeAdapterProvider>();
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAspNetUser, AspNetUser>();
 

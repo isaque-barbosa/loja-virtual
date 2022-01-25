@@ -6,6 +6,7 @@ import { CurrencyMask } from "../../services/mask";
 import { catalogoUrl } from "../../services/api";
 
 import { CardBody, Button } from "./styles";
+import React, { useState } from "react";
 
 export interface IProduto {
     id: string;
@@ -23,6 +24,8 @@ export const Produto: React.FC = () => {
     const { id } = useParams();
 
     const { data } = useFetch<IProduto>(`${catalogoUrl}catalogo/produtos/${id}`);
+
+    const [quantidade, setQuantidade] = useState<number>(1);
 
     console.log(data);
     if(!data){
@@ -48,6 +51,17 @@ export const Produto: React.FC = () => {
                             </h5>
                             <p className="card-text">
                                 {data.descricao}
+                            </p>
+                            <p className="card-text">
+                                <button className="btn btn-primary" onClick={() => {
+                                        if(quantidade == 1) return; setQuantidade(quantidade - 1)
+                                    }}>
+                                    -
+                                </button>
+                                <input type="number" value={quantidade} />
+                                <button className="btn btn-primary" onClick={() => setQuantidade(quantidade + 1)}>
+                                    +
+                                </button>
                             </p>
                             <p className="card-text">
                                 {CurrencyMask.format(data.valor)}

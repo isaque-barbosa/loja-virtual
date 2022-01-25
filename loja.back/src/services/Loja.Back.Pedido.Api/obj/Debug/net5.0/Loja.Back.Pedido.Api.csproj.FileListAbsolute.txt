@@ -7,6 +7,7 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\bin\Debug\net5.0\Loja.Back.Pedido.Api.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\bin\Debug\net5.0\ref\Loja.Back.Pedido.Api.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\bin\Debug\net5.0\Loja.Back.Pedido.Api.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.csproj.AssemblyReference.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.AssemblyInfoInputs.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.AssemblyInfo.cs
@@ -20,4 +21,3 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\ref\Loja.Back.Pedido.Api.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.genruntimeconfig.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedido.Api\obj\Debug\net5.0\Loja.Back.Pedido.Api.csproj.AssemblyReference.cache

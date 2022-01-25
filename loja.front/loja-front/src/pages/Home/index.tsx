@@ -41,7 +41,7 @@ export const Home: React.FC = () => {
 
     return(
         <MainContent>
-            <div className="row">
+            <div className="row m-3">
                 {data.map(produto => (
                     <div className="col-sm-2">
                         <div className="card">

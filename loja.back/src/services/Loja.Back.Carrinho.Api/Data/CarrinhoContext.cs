@@ -1,5 +1,6 @@
 ﻿using FluentValidation.Results;
-using Loja.Back.Carrinho.Api.Model;
+using Loja.Back.Carrinho.Api.Models;
+using Loja.Back.Core.Messages;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 
@@ -15,6 +16,7 @@ namespace Loja.Back.Carrinho.Api.Data
 
         public DbSet<CarrinhoItem> CarrinhoItens { get; set; }
         public DbSet<CarrinhoCliente> CarrinhoCliente { get; set; }
+        public DbSet<Produto> Produtos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +25,7 @@ namespace Loja.Back.Carrinho.Api.Data
                 property.SetColumnType("varchar(100)");
 
             modelBuilder.Ignore<ValidationResult>();
+            modelBuilder.Ignore<Event>();
 
             modelBuilder.Entity<CarrinhoCliente>()
                 .HasIndex(x => x.ClienteId)

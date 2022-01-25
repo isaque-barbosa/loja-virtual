@@ -1,5 +1,5 @@
 ﻿using Loja.Back.Carrinho.Api.Data;
-using Loja.Back.Carrinho.Api.Model;
+using Loja.Back.Carrinho.Api.Models;
 using Loja.Back.WebAPI.Core.Controllers;
 using Loja.Back.WebAPI.Core.Usuario;
 using Microsoft.AspNetCore.Authorization;
@@ -34,11 +34,12 @@ namespace Loja.Back.Carrinho.Api.Controllers
         {
             var carrinho = await ObterCarrinhoCliente();
 
-            //TODO
-            ///var produto = await _context.Catalogo.ObterProdutoPorId(item.ProdutoId);
-            ///item.Nome = produto.nome;
-            ///item.Valor = produto.Valor;
-            ///item.Imagem = produto.Imagem;
+            var produto = await ObterProdutoPorId(item.ProdutoId, item.Quantidade);
+            if (!OperacaoValida()) CustomResponse();
+
+            item.Nome = produto.Nome;
+            item.Valor = produto.Valor;
+            item.Imagem = produto.Imagem;
 
             if (carrinho == null)
             {
@@ -60,9 +61,11 @@ namespace Loja.Back.Carrinho.Api.Controllers
         [HttpPut("carrinho/atualizar-item/{produtoId}")]
         public async Task<IActionResult> AtualizarItemCarrinho(Guid produtoId, CarrinhoItem item)
         {
-            //TODO
-            ///var produto = await _context.Catalogo.ObterProdutoPorId(item.ProdutoId);
-            ///if(produto is null) AdicionarErroProcessamento("Produto Inexistente.");
+            var produto = await ObterProdutoPorId(item.ProdutoId, item.Quantidade);
+
+            item.Nome = produto.Nome;
+            item.Valor = produto.Valor;
+            item.Imagem = produto.Imagem;
 
             var carrinho = await ObterCarrinhoCliente();
             var itemCarrinho = await ObterItemCarrinhoValidado(produtoId, carrinho, item);
@@ -85,6 +88,14 @@ namespace Loja.Back.Carrinho.Api.Controllers
         [HttpDelete("carrinho/remover-item/{produtoId}")]
         public async Task<IActionResult> RemoverItemCarrinho(Guid produtoId)
         {
+            //Mudar futuramente
+            var produto = await _context.Produtos.FirstOrDefaultAsync(x => x.Id == produtoId);
+            if(produto is null)
+            {
+                AdicionarErroProcessamento("Produto Inválido.");
+                return CustomResponse();
+            }
+
             var carrinho = await ObterCarrinhoCliente();
             var itemCarrinho = await ObterItemCarrinhoValidado(produtoId, carrinho);
 
@@ -101,6 +112,24 @@ namespace Loja.Back.Carrinho.Api.Controllers
             await PersistirDados();
 
             return CustomResponse();
+        }
+
+        private async Task<Produto> ObterProdutoPorId(Guid id, int quantidade)
+        {
+            try
+            {
+                var produto = await _context.Produtos.FirstAsync(x => x.Id == id);
+                if (quantidade < 1) AdicionarErroProcessamento($"Escolha ao menos uma unidade do produto {produto.Nome}.");
+                if (quantidade > produto.QuantidadeEstoque) 
+                    AdicionarErroProcessamento($"O produto {produto.Nome} possui {produto.QuantidadeEstoque} unidades em estoque," +
+                                                $" você selecionou {quantidade}.");
+                return produto;
+            }
+            catch(Exception e)
+            {
+                AdicionarErroProcessamento("Produto Inválido.");
+                return null;
+            }            
         }
 
         private async Task<CarrinhoCliente> ObterCarrinhoCliente()

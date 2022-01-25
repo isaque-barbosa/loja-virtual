@@ -33,7 +33,10 @@ namespace Loja.Back.MVC.Services
                 };
             }
 
-            return await DeserializarObjetoResponse<UsuarioRespostaLogin>(response);
+            return new UsuarioRespostaLogin
+            {
+                UsuarioResposta = await DeserializarObjetoResponse<UsuarioResposta>(response)
+            };
         }
 
         public async Task<UsuarioRespostaLogin> Registro(UsuarioRegistro usuarioRegistro)
