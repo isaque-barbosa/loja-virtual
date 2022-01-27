@@ -1,23 +1,29 @@
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
+
 import { MainContent } from "../../components/MainContent";
+import { Carregando } from "../../components/Carregando";
 
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
-import { catalogoUrl } from "../../services/api";
+import api, { Error, carrinhoUrl, catalogoUrl } from "../../services/api";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 import { CardBody, Button } from "./styles";
-import React, { useState } from "react";
 
 export interface IProduto {
     id: string;
     nome: string;
     categoria: string;
     descricao: string;
-    ativo: boolean;
     valor: number;
-    dataCadastro: Date;
     imagem: string;
-    quantidadeEstoque: number;
+}
+
+export interface Item {
+    produtoId: string;
+    quantidade: number;
 }
 
 export const Produto: React.FC = () => {
@@ -27,9 +33,28 @@ export const Produto: React.FC = () => {
 
     const [quantidade, setQuantidade] = useState<number>(1);
 
+    async function comprar(){        
+
+        const model = { produtoId: id, quantidade: quantidade } as Item;
+
+        api.post(`${carrinhoUrl}carrinho/adicionar-item`, model)
+            .then(response => {
+                console.log("Produto adicionado ao carrinho!");
+            })
+            .catch(function (error){
+                try{
+                    const response  = error.response.data as Error;
+                    console.log(response);
+                }
+                catch{
+                    console.log("Servidor indisponível. Desculpe a inconveniência! Tente novamente mais tarde.");
+                }
+            });
+    }
+
     console.log(data);
     if(!data){
-        return <p>Carregando...</p>
+        return <Carregando />;
     }
 
     return(
@@ -52,24 +77,42 @@ export const Produto: React.FC = () => {
                             <p className="card-text">
                                 {data.descricao}
                             </p>
-                            <p className="card-text">
-                                <button className="btn btn-primary" onClick={() => {
-                                        if(quantidade == 1) return; setQuantidade(quantidade - 1)
+                            <div className="card-text my-3">
+                                <div className="input-group w-25">
+                                    <button className="btn btn-primary"
+                                        onClick={() => {
+                                            if(quantidade === 1) return; setQuantidade(quantidade - 1)
                                     }}>
-                                    -
-                                </button>
-                                <input type="number" value={quantidade} />
-                                <button className="btn btn-primary" onClick={() => setQuantidade(quantidade + 1)}>
-                                    +
-                                </button>
-                            </p>
-                            <p className="card-text">
+                                        <FontAwesomeIcon icon={faMinus} />
+                                    </button>
+                                    <input 
+                                        type="number"
+                                        value={quantidade}
+                                        className="form-control"
+                                        onChange={x => {
+                                            let numeroInput: number = parseInt(x.target.value) || 1;
+                                            if(numeroInput === 0) return;
+                                            setQuantidade(numeroInput);
+                                        }}
+                                    />
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => setQuantidade(quantidade + 1)}
+                                    >
+                                        <FontAwesomeIcon icon={faPlus} />
+                                    </button>
+                                </div>
+                            </div>
+                            <p className="card-text h1">
                                 {CurrencyMask.format(data.valor)}
                             </p>
                             
                         </CardBody>
 
-                        <Button className="btn btn-primary">
+                        <Button
+                            onClick={() => comprar()}
+                            className="btn btn-primary"
+                        >
                             Comprar
                         </Button>
                     </div>                   

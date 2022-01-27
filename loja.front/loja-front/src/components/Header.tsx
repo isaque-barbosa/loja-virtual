@@ -7,11 +7,19 @@ import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 import { isAuthenticated, logout, getEmail } from "../services/auth";
 
 import "../styles/nav.css";
+import { useFetch } from "../hooks/useFetch";
+import { carrinhoUrl } from "../services/api";
 
 export function Header(){
 
+    const { data } = useFetch<number>(`${carrinhoUrl}carrinho/obter-quantidade-itens`);
+
     function abrirDropdown() {
         document?.getElementById("myDropdown")?.classList.toggle("show");
+    }
+
+    function abrirNavbar() {
+        document?.getElementById("navbarSupportedContent")?.classList.toggle("show");
     }
 
     window.onclick = function(e) {
@@ -68,28 +76,28 @@ export function Header(){
                 <Link className="navbar-brand" to="/">
                     <img src={Logo} alt="Logo da empresa" />
                 </Link>
-                <form className="d-flex">
-                    <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                <form className="d-flex" style={{width: "65%"}}>
+                    <input className="form-control me-2 w-100" type="search" placeholder="Search" aria-label="Search" />
                     <button className="btn btn-outline-success" type="submit">Search</button>
                 </form>
-                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" onClick={() => abrirNavbar()}>
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <div className="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                    <ul className="navbar-nav mb-2 mb-lg-0 ms-auto">
 
                             <li className="nav-item position-relative me-3">
-                                <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/carrinho">
+                                <Link className={"nav-link"} to="/carrinho">
                                     <FontAwesomeIcon style={{width: 50, height: 19}} icon={faShoppingCart} />
                                 </Link>
                                 <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                    0
+                                    {data || 0}
                                     <span className="visually-hidden">unread messages</span>
                                 </span>
                             </li>
                         
                             {!isAuthenticated() && <li className="nav-item">
-                                                        <Link className={"nav-link " + IsActive("/carrinho")} aria-current="page" to="/login">
+                                                        <Link className={"nav-link " + IsActive("/carrinho")} to="/login">
                                                             Entrar
                                                         </Link>
                                                     </li>}

@@ -27,6 +27,10 @@ export const Column = styled.div`
       }
 `;
 
+export const Toastr = styled.div`
+    z-index: 11;
+`;
+
 export const Row = styled.div`
     margin: 0 -5px;
     &:after {

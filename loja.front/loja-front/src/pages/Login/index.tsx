@@ -37,7 +37,7 @@ export const LogIn: React.FC = () => {
             .catch(function (error) {
                 try{
                     const response = error.response.data as Error;
-                    erros.push(response.errors.Mensagens[0])
+                    erros.push(response.errors.Mensagens[0]);
                     console.log(response);
                 }
                 catch{

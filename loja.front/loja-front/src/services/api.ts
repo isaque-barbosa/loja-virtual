@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { getToken } from './auth';
+import { getToken, logout } from './auth';
 
 export const loginUrl = 'https://localhost:44321/';
 export const catalogoUrl = 'https://localhost:44391/';
@@ -36,6 +36,7 @@ api.interceptors.response.use(function(onResponse){
     function(onError) {
         switch(onError.response.status){
             case 401:
+                logout();
                 window.location.href = "/login";
                 break;
             case 403:

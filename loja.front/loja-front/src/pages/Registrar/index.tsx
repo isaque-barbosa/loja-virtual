@@ -72,7 +72,7 @@ export const Registrar: React.FC = () => {
                            placeholder="Confirme sua senha"
                            onChange={x => setSenhaConfirmacao(x.target.value)} />
 
-                    <button type="submit">Entrar</button>
+                    <button type="submit">Registrar</button>
                 </Form>
             </Container>
         </MainContent>
