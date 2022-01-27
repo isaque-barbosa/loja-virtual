@@ -3,6 +3,7 @@ using Loja.Back.WebAPI.Core.Controllers;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 
 namespace Loja.Back.Catalogo.Api.Controllers
@@ -17,15 +18,17 @@ namespace Loja.Back.Catalogo.Api.Controllers
         }
 
         [HttpGet("catalogo/produtos")]
-        public async Task<IEnumerable<Produto>> Index()
+        public async Task<IEnumerable<ProdutoViewModel>> Index()
         {
-            return await _produtoRepository.ObterTodos();
+            var produtos = await _produtoRepository.ObterTodos();
+            return produtos.Select(x => x.ParaViewModel()).ToList();
         }
 
         [HttpGet("catalogo/produtos/{id}")]
-        public async Task<Produto> ProdutoDetalhe(Guid id)
+        public async Task<ProdutoViewModel> ProdutoDetalhe(Guid id)
         {
-            return await _produtoRepository.ObterPorId(id);
+            var produto = await _produtoRepository.ObterPorId(id);
+            return produto.ParaViewModel();
         }
     }
 }

@@ -22,6 +22,16 @@ namespace Loja.Back.Carrinho.Api.Models
         [JsonIgnore]
         public CarrinhoCliente CarrinhoCliente { get; set; }
 
+        public CarrinhoItem(Guid produtoId, string nome, int quantidade, decimal valor, string imagem)
+        {
+            Id = Guid.NewGuid();
+            ProdutoId = produtoId;
+            Nome = nome;
+            Quantidade = quantidade;
+            Valor = valor;
+            Imagem = imagem;
+        }
+
         internal void AssociarCarrinho(Guid carrinhoId)
         {
             CarrinhoId = carrinhoId;
@@ -64,7 +74,7 @@ namespace Loja.Back.Carrinho.Api.Models
                     .WithMessage(item => $"A quantidade mínima para o {item.Nome} é 1.");
 
                 RuleFor(x => x.Quantidade)
-                    .LessThan(CarrinhoCliente.MAX_QUANTIDADE_ITEM)
+                    .LessThanOrEqualTo(CarrinhoCliente.MAX_QUANTIDADE_ITEM)
                     .WithMessage(item => $"A quantidade máxima do {item.Nome} é {CarrinhoCliente.MAX_QUANTIDADE_ITEM}.");
 
                 RuleFor(x => x.Valor)

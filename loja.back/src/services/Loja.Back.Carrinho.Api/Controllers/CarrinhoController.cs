@@ -29,6 +29,17 @@ namespace Loja.Back.Carrinho.Api.Controllers
             return await ObterCarrinhoCliente() ?? new CarrinhoCliente();
         }
 
+        [HttpGet("carrinho/obter-quantidade-itens")]
+        [AllowAnonymous]
+        public async Task<int> ObterQuantidadeItensCarrinho()
+        {
+            if (_user.ObterUserId() == Guid.Empty) return 0;
+
+            var carrinho = await ObterCarrinhoCliente() ?? new CarrinhoCliente();
+
+            return carrinho.ObterQuantidadeItens();
+        }
+
         [HttpPost("carrinho/adicionar-item")]
         public async Task<IActionResult> AdicionarItemCarrinho(CarrinhoItem item)
         {
@@ -41,7 +52,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
             item.Valor = produto.Valor;
             item.Imagem = produto.Imagem;
 
-            if (carrinho == null)
+            if (carrinho is null)
             {
                 ManipularNovoCarrinho(item);
             }
@@ -50,7 +61,6 @@ namespace Loja.Back.Carrinho.Api.Controllers
                 ManipularCarrinhoExistente(carrinho, item);
             }
 
-            ValidarCarrinho(carrinho);
             if (!OperacaoValida()) return CustomResponse();
 
             await PersistirDados();
@@ -58,14 +68,16 @@ namespace Loja.Back.Carrinho.Api.Controllers
             return CustomResponse();
         }
 
-        [HttpPut("carrinho/atualizar-item/{produtoId}")]
-        public async Task<IActionResult> AtualizarItemCarrinho(Guid produtoId, CarrinhoItem item)
+        [HttpPut("carrinho/atualizar-item/{produtoId}/{quantidade}")]
+        public async Task<IActionResult> AtualizarItemCarrinho(Guid produtoId, int quantidade)
         {
-            var produto = await ObterProdutoPorId(item.ProdutoId, item.Quantidade);
+            var produto = await ObterProdutoPorId(produtoId, quantidade);
+            if (!OperacaoValida()) CustomResponse();
 
-            item.Nome = produto.Nome;
-            item.Valor = produto.Valor;
-            item.Imagem = produto.Imagem;
+            var item = new CarrinhoItem(produtoId, produto.Nome, quantidade, produto.Valor, produto.Imagem);
+            //item.Nome = produto.Nome;
+            //item.Valor = produto.Valor;
+            //item.Imagem = produto.Imagem;
 
             var carrinho = await ObterCarrinhoCliente();
             var itemCarrinho = await ObterItemCarrinhoValidado(produtoId, carrinho, item);
@@ -145,6 +157,8 @@ namespace Loja.Back.Carrinho.Api.Controllers
 
             carrinho.AdicionarItem(item);
 
+            ValidarCarrinho(carrinho);
+
             _context.CarrinhoCliente.Add(carrinho);
         }
 
@@ -153,6 +167,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
             var produtoItemExistente = carrinho.CarrinhoItemExistente(item);
 
             carrinho.AdicionarItem(item);
+            ValidarCarrinho(carrinho);
 
             if (produtoItemExistente)
             {

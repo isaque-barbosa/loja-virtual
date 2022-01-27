@@ -13,5 +13,10 @@ namespace Loja.Back.Catalogo.Api.Models
         public DateTime DataCadastro { get; set; }
         public string Imagem { get; set; }
         public int QuantidadeEstoque { get; set; }
+
+        internal ProdutoViewModel ParaViewModel()
+        {
+            return new ProdutoViewModel(this.Id, this.Nome, this.Categoria, this.Descricao, this.Valor, this.Imagem);
+        }
     }
 }

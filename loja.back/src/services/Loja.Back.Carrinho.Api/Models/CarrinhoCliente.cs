@@ -24,6 +24,16 @@ namespace Loja.Back.Carrinho.Api.Models
 
         public CarrinhoCliente() { }
 
+        internal int ObterQuantidadeItens()
+        {
+            int quantidade = 0;
+
+            foreach (var item in Itens)
+                quantidade += item.Quantidade;
+
+            return quantidade;
+        }
+
         internal void CalcularValorCarrinho()
         {
             ValorTotal = Itens.Sum(x => x.CalcularValor());
