@@ -16,6 +16,7 @@ import { Imagem } from "./styles";
 
 import Camiseta from "../../images/produtos/camiseta1.jpg"
 import FormaPagamento from "../../images/misc/payments.png";
+import { Alert } from "react-bootstrap";
 
 interface ICarrinho {
     valorTotal: number;
@@ -35,12 +36,9 @@ export const Carrinho: React.FC = () => {
 
     const [itens, setItens] = useState<Item[]>(data?.itens || []);
     const [error, setError] = useState<string[]>();
+    const [showAlert, setShowAlert] = useState(false);
 
     console.log(data);
-
-    function fecharAlert() {
-        document?.getElementById("alert")?.classList.toggle("show");
-    }
 
     async function deletarItem(produtoId: string){
         await api.delete(`${carrinhoUrl}carrinho/remover-item/${produtoId}`)
@@ -58,6 +56,18 @@ export const Carrinho: React.FC = () => {
         });
     }
 
+    function AlertDismissible(){
+
+        return (
+          <Alert variant="danger" hidden={!showAlert} onClose={() => setShowAlert(false)} dismissible>
+              <Alert.Heading>Ops! Algo deu errado. :(</Alert.Heading>
+                  {error?.map((error, i) => {
+                      return <li key={i}>{error}</li> 
+                  })}
+          </Alert>
+        );
+  }
+
     async function atualizarItem(produtoId: string){
         const quantidade = itens.find(x => x.produtoId == produtoId)?.quantidade;
         const erros = [] as string[];
@@ -69,7 +79,7 @@ export const Carrinho: React.FC = () => {
         .catch(function (error){
             try{
                 const response  = error.response.data as Error;
-                erros.push(response.errors.Mensagens[0]);
+                response.errors.Mensagens.forEach(mensagem => erros.push(mensagem));
                 console.log(response);
             }
             catch{
@@ -77,71 +87,18 @@ export const Carrinho: React.FC = () => {
             }
         });
         setError(erros);
+        setShowAlert(true);
     }
 
     if(!data){
         return <Carregando />;
     }
 
-    // return(
-    //     <MainContent>
-    //         <div className="list-group">
-    //             {data.itens.map(item => (
-    //                 <Link
-    //                     className="list-group-item list-group-item-action"
-    //                     to={`/produtos/${item.produtoId}`}
-    //                 >
-    //                     <div className="d-flex">
-    //                         <Imagem src="https://a-static.mlcdn.com.br/1500x1500/camisa-social-masculina-manga-longa-slim-botoes-duplo-azul-ceu-us-born/estilomodas/5245901416/a06bff7439beadf189edda14611bff20.jpg"
-    //                         className="img-fluid"
-    //                         alt={item.nome} />
-
-    //                         <div
-    //                             className="w-100 justify-content-between"
-    //                             style={{margin: "26px 0 0 25px"}}
-    //                         >
-    //                             <h5 className="mb-1">
-    //                                 {item.nome}
-    //                             </h5>
-
-    //                             <p className="mb-1">
-    //                                 {CurrencyMask.format(item.valor)}
-    //                             </p>
-    //                             <small>Quantidade: {item.quantidade}</small>
-                                
-    //                         </div>
-
-    //                         <div className="position-absolute end-0 top-50 translate-middle">
-    //                             <button className="btn btn-danger" onClick={() => deletarItem(item.produtoId)}>
-    //                                 <FontAwesomeIcon icon={faTrash} />
-    //                             </button>
-    //                         </div>
-    //                     </div>
-    //                 </Link>
-                    
-    //             ))}
-    //             <div className="list-group-item">
-    //                 <div className="d-flex mt-3">
-    //                     <h2 className="ms-auto">
-    //                         Total: {CurrencyMask.format(data.valorTotal)}
-    //                     </h2>
-    //                 </div>
-    //             </div>
-    //         </div>
-    //     </MainContent>
-    // );
-
     return(
         <MainContent>
             <section className="padding-y my-3">
                 <div className="container">
-                    {error && 
-                        <div className="alert alert-danger alert-dismissible fade show" id="alert" role="alert">
-                            <strong>Ops! Algo deu errado. :(</strong>
-                                {error.map((error, i) => { return <li key={i}>{error}</li> })}
-                            <button type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" onClick={() => fecharAlert()}></button>
-                        </div>
-                    }
+                    <AlertDismissible  />
                     {itens.length > 0 &&
                         <div className="row">
                             <main className="col-md-9">
