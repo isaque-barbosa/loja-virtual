@@ -75,9 +75,6 @@ namespace Loja.Back.Carrinho.Api.Controllers
             if (!OperacaoValida()) CustomResponse();
 
             var item = new CarrinhoItem(produtoId, produto.Nome, quantidade, produto.Valor, produto.Imagem);
-            //item.Nome = produto.Nome;
-            //item.Valor = produto.Valor;
-            //item.Imagem = produto.Imagem;
 
             var carrinho = await ObterCarrinhoCliente();
             var itemCarrinho = await ObterItemCarrinhoValidado(produtoId, carrinho, item);
@@ -137,7 +134,7 @@ namespace Loja.Back.Carrinho.Api.Controllers
                                                 $" você selecionou {quantidade}.");
                 return produto;
             }
-            catch(Exception e)
+            catch
             {
                 AdicionarErroProcessamento("Produto Inválido.");
                 return null;

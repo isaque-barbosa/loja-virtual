@@ -170,7 +170,7 @@ namespace Loja.Back.Identidade.Api.Controllers
             {
                 return await _bus.RequestAsync<UsuarioRegistradoIntegrationEvent, ResponseMessage>(usuarioRegistrado);
             }
-            catch (Exception e)
+            catch
             {
                 await _userManager.DeleteAsync(usuario);
                 throw;

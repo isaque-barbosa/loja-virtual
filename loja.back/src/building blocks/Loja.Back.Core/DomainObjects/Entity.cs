@@ -32,7 +32,7 @@ namespace Loja.Back.Core.DomainObjects
             _notificacoes?.Clear();
         }
 
-        #region [Configurações]
+        #region [Comparações]
         public override bool Equals(object obj)
         {
             var compareTo = obj as Entity;
