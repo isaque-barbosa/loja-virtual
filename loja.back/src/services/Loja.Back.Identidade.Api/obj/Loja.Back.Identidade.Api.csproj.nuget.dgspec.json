@@ -167,7 +167,11 @@
         "frameworks": {
           "net5.0": {
             "targetAlias": "net5.0",
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj": {
+                "projectPath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
@@ -187,6 +191,10 @@
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[5.0.13, )"
+            },
+            "Microsoft.Extensions.Http.Polly": {
+              "target": "Package",
+              "version": "[5.0.1, )"
             }
           },
           "imports": [

@@ -1,6 +1,10 @@
 ﻿using Loja.Back.WebAPI.Core.Usuario;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.Http;
+using Loja.Back.Bff.Compras.Extensions;
+using Loja.Back.Bff.Compras.Services;
+using Polly;
+using System;
 
 namespace Loja.Back.Bff.Compras.Configuration
 {
@@ -10,6 +14,20 @@ namespace Loja.Back.Bff.Compras.Configuration
         {
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             services.AddScoped<IAspNetUser, AspNetUser>();
+
+            services.AddTransient<HttpClientAuthorizationDelegatingHandler>();
+
+            services.AddHttpClient<ICatologoService, CatalogoService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.EsperarTentar())
+                .AddTransientHttpErrorPolicy(
+                    x => x.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
+            services.AddHttpClient<ICarrinhoService, CarrinhoService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.EsperarTentar())
+                .AddTransientHttpErrorPolicy(
+                    x => x.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
         }
     }
 }

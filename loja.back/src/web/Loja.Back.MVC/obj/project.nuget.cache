@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Az4IY66yy7IWwBqOB6rn6ykdCIgFVpe3ZNVysVynCEfquzjRVBSy1woKzRHWNtL0WEzGl/fAVFELvvVbv/O6xw==",
+  "dgSpecHash": "5ATLVi9rVKkuhf3v3DezyCYYqxIkcB7RgKkd/p798VrOSj2jQpJEw2fl2cxsULis+30eH1R75FA3D4nMpwNV4A==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\web\\Loja.Back.MVC\\Loja.Back.MVC.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\5.0.13\\microsoft.aspnetcore.authentication.jwtbearer.5.0.13.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.0\\microsoft.extensions.dependencyinjection.5.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",

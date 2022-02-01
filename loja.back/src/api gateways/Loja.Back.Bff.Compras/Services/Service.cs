@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loja.Back.Core.Communication;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -35,6 +36,11 @@ namespace Loja.Back.Bff.Compras.Services
 
             response.EnsureSuccessStatusCode();
             return true;
+        }
+
+        protected ResponseResult RetornoOk()
+        {
+            return new ResponseResult();
         }
     }
 }
