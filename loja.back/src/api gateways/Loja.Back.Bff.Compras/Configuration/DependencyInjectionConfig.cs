@@ -5,6 +5,7 @@ using Loja.Back.Bff.Compras.Extensions;
 using Loja.Back.Bff.Compras.Services;
 using Polly;
 using System;
+using Loja.Back.WebAPI.Core.Extensions;
 
 namespace Loja.Back.Bff.Compras.Configuration
 {

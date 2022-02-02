@@ -65,3 +65,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\MediatR.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\Loja.Back.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\Loja.Back.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\Polly.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Carrinho.Api\bin\Debug\net5.0\Polly.Extensions.Http.dll

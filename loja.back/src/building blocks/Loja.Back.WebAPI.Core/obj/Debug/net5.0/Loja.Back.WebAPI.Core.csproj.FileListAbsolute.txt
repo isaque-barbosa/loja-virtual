@@ -10,3 +10,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\build
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\obj\Debug\net5.0\Loja.Back.WebAPI.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\obj\Debug\net5.0\ref\Loja.Back.WebAPI.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\obj\Debug\net5.0\Loja.Back.WebAPI.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\bin\Debug\net5.0\Loja.Back.Core.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\bin\Debug\net5.0\Loja.Back.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\building blocks\Loja.Back.WebAPI.Core\obj\Debug\net5.0\Loja.Back.WebAPI.Core.csproj.CopyComplete

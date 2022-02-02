@@ -41,3 +41,6 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\L
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\ref\Loja.Back.MVC.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.genruntimeconfig.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\MediatR.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.pdb
