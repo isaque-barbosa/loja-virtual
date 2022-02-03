@@ -14,7 +14,8 @@ namespace Loja.Back.Bff.Compras.Configuration
                 x.SwaggerDoc("v1", new OpenApiInfo()
                 {
                     Title = "Loja Online Compras BFF API Gateway",
-                    Description = "Api responsável pelo gerenciamento das compras.",
+                    Description = "Api responsável pelo gerenciamento das compras," +
+                                  " juntando as apis responsaveis pelo processo, fazendo um Backend para o Frontend.",
                     Contact = new OpenApiContact() { Name = "Isaque de Oliveira", Email = "isaque.barbosa@base2.com.br" },
                     License = new OpenApiLicense() { Name = "MIT", Url = new Uri("https://opensource.org/licenses/MIT") }
                 });
