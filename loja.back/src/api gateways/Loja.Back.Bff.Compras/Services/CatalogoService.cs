@@ -19,7 +19,7 @@ namespace Loja.Back.Bff.Compras.Services
         public CatalogoService(HttpClient httpClient, IOptions<AppServicesSettings> settings)
         {
             _httpClient = httpClient;
-            _httpClient.BaseAddress = new Uri(settings.Value.CatologoUrl);
+            _httpClient.BaseAddress = new Uri(settings.Value.CatalogoUrl);
         }
 
         public async Task<ItemProdutoDTO> ObterPorId(Guid id)

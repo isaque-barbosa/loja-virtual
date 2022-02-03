@@ -50,7 +50,7 @@ namespace Loja.Back.Bff.Compras.Services
         {
             var itemContent = ObterConteudo(carrinho);
 
-            var response = await _httpClient.PutAsync($"carrinho/atualizar-item/{produtoId}/{carrinho.Quantidade}/", itemContent);
+            var response = await _httpClient.PutAsync($"carrinho/atualizar-item/{produtoId}/", itemContent);
 
             if (!TratarErrosResponse(response)) return await DeserializarObjetoResponse<ResponseResult>(response);
 
