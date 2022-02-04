@@ -1,5 +1,4 @@
 using Loja.Back.MVC.Configuration;
-using Loja.Back.WebAPI.Core.Identitdade;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;

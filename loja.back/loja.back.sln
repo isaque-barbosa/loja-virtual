@@ -44,7 +44,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Pedido", "Pedido", "{BF5CF8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pagamento.Api", "src\services\Loja.Back.Pagamento.Api\Loja.Back.Pagamento.Api.csproj", "{2066CA51-ABD9-4D3B-9385-5325361054FB}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pedido.Api", "src\services\Loja.Back.Pedido.Api\Loja.Back.Pedido.Api.csproj", "{3D26D652-1C97-4072-B793-C3A877B5E399}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Pedidos.Api", "src\services\Loja.Back.Pedido.Api\Loja.Back.Pedidos.Api.csproj", "{3D26D652-1C97-4072-B793-C3A877B5E399}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{208D9936-99DD-41D9-B5FC-A8BF135A7D5F}"
 EndProject
@@ -58,7 +58,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApiGateways", "ApiGateways"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Compras", "Compras", "{DB2080DA-568F-41C5-81DC-38E01EC4ED94}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Bff.Compras", "src\api gateways\Loja.Back.Bff.Compras\Loja.Back.Bff.Compras.csproj", "{50FD55EA-52B7-4997-860B-FC4025CF142E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Loja.Back.Bff.Compras", "src\api gateways\Loja.Back.Bff.Compras\Loja.Back.Bff.Compras.csproj", "{50FD55EA-52B7-4997-860B-FC4025CF142E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Pedidos.Domain", "src\services\Loja.Back.Pedidos.Domain\Loja.Back.Pedidos.Domain.csproj", "{CE7C90E6-1DF7-433B-9496-8858439109B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Loja.Back.Pedidos.Infra", "src\services\Loja.Back.Pedidos.Infra\Loja.Back.Pedidos.Infra.csproj", "{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -110,6 +114,14 @@ Global
 		{50FD55EA-52B7-4997-860B-FC4025CF142E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{50FD55EA-52B7-4997-860B-FC4025CF142E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{50FD55EA-52B7-4997-860B-FC4025CF142E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE7C90E6-1DF7-433B-9496-8858439109B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7C90E6-1DF7-433B-9496-8858439109B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7C90E6-1DF7-433B-9496-8858439109B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7C90E6-1DF7-433B-9496-8858439109B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -141,6 +153,8 @@ Global
 		{3F783845-86D3-47E3-999E-48E88BEBBB79} = {9DEB9110-3C23-4F81-B06A-0157AEC28142}
 		{DB2080DA-568F-41C5-81DC-38E01EC4ED94} = {3F783845-86D3-47E3-999E-48E88BEBBB79}
 		{50FD55EA-52B7-4997-860B-FC4025CF142E} = {DB2080DA-568F-41C5-81DC-38E01EC4ED94}
+		{CE7C90E6-1DF7-433B-9496-8858439109B3} = {BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9}
+		{BF813605-FB77-4A65-BFBF-FEA91BEFA4CF} = {BF5CF829-A9F2-4F45-BA70-3D0574FAC9D9}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7A2EB0A6-117C-4167-9BCB-CD04CB936A71}

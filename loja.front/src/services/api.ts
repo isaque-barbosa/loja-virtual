@@ -3,7 +3,7 @@ import { getToken, logout } from './auth';
 
 export const loginUrl = 'https://localhost:44321/';
 export const catalogoUrl = 'https://localhost:44391/';
-export const carrinhoUrl = 'https://localhost:44396/';
+//export const carrinhoUrl = 'https://localhost:44396/';
 export const comprasBffUrl = 'https://localhost:44385/';
 
 export interface Error{

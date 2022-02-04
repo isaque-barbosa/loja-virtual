@@ -1,10 +1,3 @@
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.csproj.AssemblyReference.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.AssemblyInfoInputs.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.AssemblyInfo.cs
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.csproj.CoreCompileInputs.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\appsettings.json
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Loja.Back.Bff.Compras.exe
@@ -26,6 +19,7 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api g
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.CodeAnalysis.CSharp.Workspaces.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.CodeAnalysis.Razor.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.CodeAnalysis.Workspaces.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
@@ -42,6 +36,7 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api g
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Polly.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Polly.Extensions.Http.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\RabbitMQ.Client.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
@@ -112,6 +107,13 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api g
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Loja.Back.Core.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Loja.Back.MessageBus.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Loja.Back.WebAPI.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.csproj.AssemblyReference.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.AssemblyInfoInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.AssemblyInfo.cs
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.csproj.CoreCompileInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\staticwebassets\Loja.Back.Bff.Compras.StaticWebAssets.Manifest.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\staticwebassets\Loja.Back.Bff.Compras.StaticWebAssets.xml
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\scopedcss\bundle\Loja.Back.Bff.Compras.styles.css
@@ -121,5 +123,3 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api g
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\ref\Loja.Back.Bff.Compras.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.genruntimeconfig.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\Polly.Extensions.Http.dll

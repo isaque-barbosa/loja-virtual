@@ -24,7 +24,7 @@ namespace Loja.Back.Bff.Compras.Services
 
         public async Task<ItemProdutoDTO> ObterPorId(Guid id)
         {
-            var response = await _httpClient.GetAsync($"/catologo/produtos/{id}");
+            var response = await _httpClient.GetAsync($"/catalogo/produtos/{id}");
 
             TratarErrosResponse(response);
 

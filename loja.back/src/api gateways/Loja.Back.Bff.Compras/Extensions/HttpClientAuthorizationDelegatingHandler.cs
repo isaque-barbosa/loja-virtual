@@ -1,7 +1,5 @@
 ﻿using Loja.Back.WebAPI.Core.Usuario;
-using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading;
@@ -22,14 +20,14 @@ namespace Loja.Back.Bff.Compras.Extensions
         {
             var authorizationHeader = _aspNetUser.ObterHttpContext().Request.Headers["Authorization"];
 
-            if(!string.IsNullOrEmpty(authorizationHeader))
+            if (!string.IsNullOrEmpty(authorizationHeader))
             {
                 request.Headers.Add("Authorization", new List<string>() { authorizationHeader });
             }
 
             var token = _aspNetUser.ObterUserToken();
 
-            if(token is not null)
+            if (token is not null)
             {
                 request.Headers.Authorization = new AuthenticationHeaderValue("Bearer", token);
             }

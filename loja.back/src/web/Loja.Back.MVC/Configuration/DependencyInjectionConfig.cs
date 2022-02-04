@@ -2,7 +2,6 @@
 using Loja.Back.MVC.Services.Handlers;
 using Loja.Back.WebAPI.Core.Usuario;
 using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc.DataAnnotations;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Polly;

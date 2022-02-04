@@ -4,44 +4,37 @@ import { Carregando } from "../../components/Carregando";
 
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
-import api from "../../services/api";
+import api, { comprasBffUrl } from "../../services/api";
 
 import { IProduto } from "../Produto/index";
 import { Item } from "../Carrinho";
 
-import { catalogoUrl, carrinhoUrl } from "../../services/api";
-
-import { Toastr } from "./styles";
+import { catalogoUrl } from "../../services/api";
 
 export const Home: React.FC = () => {
     const { data } = useFetch<IProduto[]>(`${catalogoUrl}catalogo/produtos`);
     
     if(!data){
         return(
-            // <MainContent>
-            //     <button onClick={() => ToastDemo()}>
-            //         Teste
-            //     </button>
-            //     <Toastr className="position-fixed bottom-0 end-0 p-3">
-            //         <div id="liveToast" className="toast hide" role="alert" aria-live="assertive" aria-atomic="true">
-            //             <div className="toast-header">
-            //             <img src="..." className="rounded me-2" alt="..." />
-            //             <strong className="me-auto">Titulo</strong>
-            //             <button type="button" className="btn-close" data-bs-dismiss="toast" aria-label="Close" onClick={() => ToastDemo()}></button>
-            //             </div>
-            //             <div className="toast-body">
-            //                 Hello, world! This is a toast message.
-            //             </div>
-            //         </div>
-            //     </Toastr>
-            // </MainContent>
             <Carregando />
         );
     }
 
     function comprar(item: Item) {
         return (event: React.MouseEvent) => {
-            api.post(`${carrinhoUrl}carrinho`, item);
+            api.post(`${comprasBffUrl}compras/carrinho/items`, item)
+            .then(response => {
+                console.log("Produto adicionado ao carrinho!");
+            })
+            .catch(function (error){
+                try{
+                    const response  = error.response.data as Error;
+                    console.log(response);
+                }
+                catch{
+                    console.log("Servidor indisponível. Desculpe a inconveniência! Tente novamente mais tarde.");
+                }
+            });;
             event.preventDefault();
         }
     };

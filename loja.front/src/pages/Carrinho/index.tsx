@@ -8,7 +8,7 @@ import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
 import { produce } from "immer";
 
-import api, { Error, carrinhoUrl } from "../../services/api";
+import api, { Error, comprasBffUrl } from "../../services/api";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrash, faSync, faChevronRight, faChevronLeft, faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
@@ -32,7 +32,7 @@ export interface Item {
 }
 
 export const Carrinho: React.FC = () => {
-    const { data } = useFetch<ICarrinho>(`${carrinhoUrl}carrinho`);
+    const { data } = useFetch<ICarrinho>(`${comprasBffUrl}compras/carrinho`);
 
     const [itens, setItens] = useState<Item[]>(data?.itens || []);
     const [error, setError] = useState<string[]>();
@@ -41,7 +41,7 @@ export const Carrinho: React.FC = () => {
     console.log(data);
 
     async function deletarItem(produtoId: string){
-        await api.delete(`${carrinhoUrl}carrinho/remover-item/${produtoId}`)
+        await api.delete(`${comprasBffUrl}compras/carrinho/items/${produtoId}`)
         .then(response => {
             console.log("Produto Excluido com Sucesso.");
         })
@@ -69,10 +69,15 @@ export const Carrinho: React.FC = () => {
   }
 
     async function atualizarItem(produtoId: string){
-        const quantidade = itens.find(x => x.produtoId == produtoId)?.quantidade;
+        const quantidade = itens.find(x => x.produtoId === produtoId)?.quantidade || 1;
+        const item = {
+            produtoId: produtoId,
+            quantidade: quantidade
+        } as Item; 
+
         const erros = [] as string[];
 
-        await api.put(`${carrinhoUrl}carrinho/atualizar-item/${produtoId}/${quantidade}`)
+        await api.put(`${comprasBffUrl}compras/carrinho/items/${produtoId}`, item)
         .then(response => {
             console.log("Produto atualizado com sucesso.");
         })
@@ -99,7 +104,7 @@ export const Carrinho: React.FC = () => {
             <section className="padding-y my-3">
                 <div className="container">
                     <AlertDismissible  />
-                    {itens.length > 0 &&
+                    {data.itens.length > 0 &&
                         <div className="row">
                             <main className="col-md-9">
                                 <div className="card">
@@ -290,7 +295,7 @@ export const Carrinho: React.FC = () => {
                                         <hr />
 
                                         <p className="text-center mb-3">
-                                                <img src={FormaPagamento} height={26} />
+                                                <img src={FormaPagamento} height={26} alt="formas de pagamento" />
                                         </p>
                                     </div>
                                 </div>
@@ -304,7 +309,7 @@ export const Carrinho: React.FC = () => {
                         <div className="text-center">
                             <div className="row">
                                 <div className="col  align-self-center">
-                                    <img src="https://w7.pngwing.com/pngs/1008/303/png-transparent-shopping-cart-icon-product-return-shopping-cart-retail-supermarket-objects.png" style={{height: 100, width: 250}} />
+                                    <img src="https://w7.pngwing.com/pngs/1008/303/png-transparent-shopping-cart-icon-product-return-shopping-cart-retail-supermarket-objects.png" style={{height: 100, width: 250}} alt="carrinho vazio" />
                                     <br /><br />
 
                                     <h4>

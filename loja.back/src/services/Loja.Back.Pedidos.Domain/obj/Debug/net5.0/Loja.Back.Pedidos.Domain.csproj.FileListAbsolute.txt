@@ -1,0 +1,15 @@
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\Loja.Back.Pedidos.Domain.deps.json
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\Loja.Back.Pedidos.Domain.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\ref\Loja.Back.Pedidos.Domain.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\Loja.Back.Pedidos.Domain.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.AssemblyInfoInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.AssemblyInfo.cs
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\ref\Loja.Back.Pedidos.Domain.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\Loja.Back.Core.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\bin\Debug\net5.0\Loja.Back.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.csproj.CopyComplete
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Pedidos.Domain\obj\Debug\net5.0\Loja.Back.Pedidos.Domain.csproj.AssemblyReference.cache

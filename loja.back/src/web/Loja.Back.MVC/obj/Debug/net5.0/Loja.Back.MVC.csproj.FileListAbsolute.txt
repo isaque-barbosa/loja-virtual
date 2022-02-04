@@ -8,6 +8,7 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\L
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\ref\Loja.Back.MVC.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.MVC.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\FluentValidation.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\MediatR.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Microsoft.Extensions.Http.Polly.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
@@ -23,8 +24,10 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\L
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Swashbuckle.AspNetCore.SwaggerUI.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.WebAPI.Core.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.WebAPI.Core.pdb
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.csproj.AssemblyReference.cache
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.AssemblyInfoInputs.cache
@@ -41,6 +44,3 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\L
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\ref\Loja.Back.MVC.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\obj\Debug\net5.0\Loja.Back.MVC.genruntimeconfig.cache
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\MediatR.dll
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.dll
-C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\web\Loja.Back.MVC\bin\Debug\net5.0\Loja.Back.Core.pdb

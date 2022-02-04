@@ -8,11 +8,11 @@ import { isAuthenticated, logout, getEmail } from "../services/auth";
 
 import "../styles/nav.css";
 import { useFetch } from "../hooks/useFetch";
-import { carrinhoUrl } from "../services/api";
+import { comprasBffUrl } from "../services/api";
 
 export function Header(){
 
-    const { data } = useFetch<number>(`${carrinhoUrl}carrinho/obter-quantidade-itens`);
+    const { data } = useFetch<number>(`${comprasBffUrl}compras/carrinho-quantidade`);
 
     function abrirDropdown() {
         document?.getElementById("myDropdown")?.classList.toggle("show");
@@ -38,7 +38,6 @@ export function Header(){
         return "";
     }
 
-    //const [user, setUser] = useState<string>("");
     let user = "";
 
     if(isAuthenticated())
@@ -46,30 +45,6 @@ export function Header(){
         user = getEmail().split("@")[0];
     }
 
-    // return(
-    //     <div className="topnav">
-    //         <div>
-    //             <Link to="/"><img src={Logo} alt="Logo da empresa" /></Link>
-    //         </div>
-    //         <div className="search-container">
-    //             <form>
-    //                 <input type="text" placeholder="Insira um nome de um produto" name="search" />
-    //                 <button type="submit">Procurar</button>
-    //             </form>
-    //         </div>
-    //         { isAuthenticated() && <div className="dropdown">
-    //                                     <button className="dropbtn" onClick={abrirDropdown}>Olá, {user}!
-    //                                         <i className="fa fa-caret-down"></i>
-    //                                     </button>
-    //                                     <div className="dropdown-content" id="myDropdown">
-    //                                         <Link to="/">Meu Perfil</Link>
-    //                                         <Link onClick={() => {logout(); window.location.reload();}} to="/">Sair</Link>
-    //                                     </div>
-    //                                 </div> }
-    //         <Link className={IsActive("/carrinho")} to="/carrinho">Carrinho</Link>
-    //         { !isAuthenticated() && <Link className={IsActive("/login")} to="/login">Entrar</Link> }
-    //     </div>
-    // );
     return(
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
             <div className="container-fluid">

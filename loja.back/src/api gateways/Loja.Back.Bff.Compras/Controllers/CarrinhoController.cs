@@ -4,7 +4,6 @@ using Loja.Back.WebAPI.Core.Controllers;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System;
-using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -16,7 +15,8 @@ namespace Loja.Back.Bff.Compras.Controllers
         private readonly ICarrinhoService _carrinhoService;
         private readonly ICatologoService _catalogoService;
 
-        public CarrinhoController(ICarrinhoService carrinhoService, ICatologoService catologoService)
+        public CarrinhoController(ICarrinhoService carrinhoService,
+            ICatologoService catologoService)
         {
             _carrinhoService = carrinhoService;
             _catalogoService = catologoService;
@@ -80,7 +80,7 @@ namespace Loja.Back.Bff.Compras.Controllers
         {
             var produto = await _catalogoService.ObterPorId(produtoId);
 
-            if(produto is null)
+            if (produto is null)
             {
                 AdicionarErroProcessamento("Produto inexistente.");
                 return CustomResponse();
@@ -99,7 +99,7 @@ namespace Loja.Back.Bff.Compras.Controllers
             var carrinho = await _carrinhoService.ObterCarrinho();
             var itemCarrinho = carrinho.Itens.FirstOrDefault(x => x.ProdutoId == produto.Id);
 
-            if(itemCarrinho is not null && itemCarrinho.Quantidade + quantidade > produto.QuantidadeEstoque)
+            if (itemCarrinho is not null && itemCarrinho.Quantidade + quantidade > produto.QuantidadeEstoque)
             {
                 AdicionarErroProcessamento($"O produto {produto.Nome} possui {produto.QuantidadeEstoque} unidades em estoque," +
                                                 $" você selecionou {quantidade}.");

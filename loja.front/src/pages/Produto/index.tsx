@@ -6,7 +6,7 @@ import { Carregando } from "../../components/Carregando";
 
 import { useFetch } from "../../hooks/useFetch";
 import { CurrencyMask } from "../../services/mask";
-import api, { Error, carrinhoUrl, catalogoUrl } from "../../services/api";
+import api, { Error, catalogoUrl, comprasBffUrl } from "../../services/api";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
@@ -37,7 +37,7 @@ export const Produto: React.FC = () => {
 
         const model = { produtoId: id, quantidade: quantidade } as Item;
 
-        api.post(`${carrinhoUrl}carrinho/adicionar-item`, model)
+        api.post(`${comprasBffUrl}compras/carrinho/items`, model)
             .then(response => {
                 console.log("Produto adicionado ao carrinho!");
             })

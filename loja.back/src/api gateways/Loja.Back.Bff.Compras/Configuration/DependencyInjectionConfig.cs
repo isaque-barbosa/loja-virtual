@@ -1,11 +1,11 @@
-﻿using Loja.Back.WebAPI.Core.Usuario;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.AspNetCore.Http;
-using Loja.Back.Bff.Compras.Extensions;
+﻿using Loja.Back.Bff.Compras.Extensions;
 using Loja.Back.Bff.Compras.Services;
+using Loja.Back.WebAPI.Core.Extensions;
+using Loja.Back.WebAPI.Core.Usuario;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.DependencyInjection;
 using Polly;
 using System;
-using Loja.Back.WebAPI.Core.Extensions;
 
 namespace Loja.Back.Bff.Compras.Configuration
 {
