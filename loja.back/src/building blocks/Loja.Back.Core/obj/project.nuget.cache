@@ -1,13 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "nijxgCVC0hIJXyq9e74Z/Iov/Z5V3Wo2igjevQJ58mqFfBDwbdwzhyMyQST/GbWVACWDYw0x//ccvgPvgYcjbA==",
+  "dgSpecHash": "uFcxsu2/jn3QWspXQxDRYRuh6+6tji1W2NeJ17zzwnoUBj1ECR0VKfMRflEKZkS6EGZEmIWU5h3kJ4MqMoigFQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\building blocks\\Loja.Back.Core\\Loja.Back.Core.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\fluentvalidation\\10.3.6\\fluentvalidation.10.3.6.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\mediatr\\9.0.0\\mediatr.9.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\5.0.0\\microsoft.extensions.configuration.abstractions.5.0.0.nupkg.sha512",
-    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.0\\microsoft.extensions.primitives.5.0.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512"
   ],
   "logs": []
 }

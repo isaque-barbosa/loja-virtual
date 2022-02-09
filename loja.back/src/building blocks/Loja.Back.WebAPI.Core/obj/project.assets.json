@@ -213,6 +213,19 @@
           "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.dll": {}
         }
       },
+      "NetDevPack/5.3.2": {
+        "type": "package",
+        "dependencies": {
+          "FluentValidation": "10.3.4",
+          "mediatr": "9.0.0"
+        },
+        "compile": {
+          "lib/net5.0/NetDevPack.dll": {}
+        },
+        "runtime": {
+          "lib/net5.0/NetDevPack.dll": {}
+        }
+      },
       "Polly/7.1.0": {
         "type": "package",
         "compile": {
@@ -268,7 +281,8 @@
         "dependencies": {
           "FluentValidation": "10.3.6",
           "MediatR": "9.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "NetDevPack": "5.3.2"
         },
         "compile": {
           "bin/placeholder/Loja.Back.Core.dll": {}
@@ -669,6 +683,21 @@
         "lib/netstandard2.0/Microsoft.IdentityModel.Tokens.xml",
         "microsoft.identitymodel.tokens.6.7.1.nupkg.sha512",
         "microsoft.identitymodel.tokens.nuspec"
+      ]
+    },
+    "NetDevPack/5.3.2": {
+      "sha512": "ycjEijBaekvE2mszGx6iwKmpSS+jm6jFIPPrI1UzANWszZrOFZlObYOK/U4CHY5xOAAHjD5uxFqMLRZzb+DvyA==",
+      "type": "package",
+      "path": "netdevpack/5.3.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "IconNuget.png",
+        "lib/net5.0/NetDevPack.dll",
+        "lib/netstandard2.0/NetDevPack.dll",
+        "lib/netstandard2.1/NetDevPack.dll",
+        "netdevpack.5.3.2.nupkg.sha512",
+        "netdevpack.nuspec"
       ]
     },
     "Polly/7.1.0": {

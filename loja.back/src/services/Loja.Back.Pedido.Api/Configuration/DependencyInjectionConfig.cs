@@ -1,4 +1,5 @@
 ﻿using Loja.Back.Core.Mediator;
+using Loja.Back.Pedidos.Api.Application.Queries;
 using Loja.Back.Pedidos.Domain.Vouchers;
 using Loja.Back.Pedidos.Infra.Data;
 using Loja.Back.Pedidos.Infra.Data.Repository;
@@ -16,6 +17,7 @@ namespace Loja.Back.Pedidos.Api.Configuration
             services.AddScoped<IAspNetUser, AspNetUser>();
 
             services.AddScoped<IMediatorHandler, MediatorHandler>();
+            services.AddScoped<IVoucherQueries, VoucherQueries>();
 
             services.AddScoped<IVoucherRepository, VoucherRepository>();
             services.AddScoped<PedidosContext>();

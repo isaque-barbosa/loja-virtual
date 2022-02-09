@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Bn7l44jMkboDXtqYohrPSSTIIw58/ARb+bFaa1nNiyxUVjmaAlil7QxOWIrCBZ9Ru6rsXig95gNbyJk9wTNqPw==",
+  "dgSpecHash": "s7g77iHvqcoEVoO7Q5fXvc2y0LGs8tT04LVpUcEAqL7fVeHm7qxWn5vf/mqoN6erBUFGd4EiD5vhWi3Q9gEFMA==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Carrinho.Api\\Loja.Back.Carrinho.Api.csproj",
   "expectedPackageFiles": [
@@ -41,6 +41,7 @@
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.11.1\\microsoft.visualstudio.azure.containers.tools.targets.1.11.1.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\polly\\7.1.0\\polly.7.1.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\polly.extensions.http\\3.0.0\\polly.extensions.http.3.0.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",

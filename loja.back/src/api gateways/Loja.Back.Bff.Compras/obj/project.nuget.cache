@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OBrQDB/55r3RSGlKvROc2bAJc52ruHv4YrkCug3zwiaPAF39u0roJ1ZYR1LM+/Fuv5OtOib4sfMbeGFZ82JbHw==",
+  "dgSpecHash": "p8mARLenLSJ1SS5XmbrSIINFfmGdENq/eSKCT9CeXMlFy03LyHhiTREnjYcHasZyQ1k9OPNqKzamjdxlMI5ZQQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\api gateways\\Loja.Back.Bff.Compras\\Loja.Back.Bff.Compras.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\5.0.2\\microsoft.visualstudio.web.codegeneration.utils.5.0.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\5.0.2\\microsoft.visualstudio.web.codegenerators.mvc.5.0.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\polly\\7.2.2\\polly.7.2.2.nupkg.sha512",

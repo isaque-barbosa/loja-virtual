@@ -24,7 +24,6 @@
   <ItemGroup>
     <Folder Include="Application\Commands\" />
     <Folder Include="Application\Events\" />
-    <Folder Include="Application\Queries\" />
     <Folder Include="wwwroot\" />
   </ItemGroup>
 

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "SPkaU3NLXkoOsgZcobZyfE5POOFePlVaUYAjvrgv0zuHkvjZSckf6Fr1EVMLPCib+XLnq2FlUFP2Y3Z7q2MQLg==",
+  "dgSpecHash": "zpwFOQcRLjZyHi+//zS3WfDrzuU/YhsZWGIZ7Cw7IOecGpd4M/voG/t3v3bK2EKMPB5WJ/a3TzVlVArSh4l2wg==",
   "success": true,
   "projectFilePath": "C:\\Users\\isaqueBarbosa\\Desktop\\Projetos\\desafio\\loja-virtual\\loja.back\\src\\services\\Loja.Back.Pedidos.Infra\\Loja.Back.Pedidos.Infra.csproj",
   "expectedPackageFiles": [
@@ -36,6 +36,7 @@
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.netcore.targets\\1.1.3\\microsoft.netcore.targets.1.1.3.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\netdevpack\\5.3.2\\netdevpack.5.3.2.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\newtonsoft.json\\10.0.1\\newtonsoft.json.10.0.1.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\isaqueBarbosa\\.nuget\\packages\\system.collections\\4.3.0\\system.collections.4.3.0.nupkg.sha512",
