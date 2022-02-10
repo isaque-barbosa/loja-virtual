@@ -16,7 +16,6 @@ namespace Loja.Back.Carrinho.Api.Data
 
         public DbSet<CarrinhoItem> CarrinhoItens { get; set; }
         public DbSet<CarrinhoCliente> CarrinhoCliente { get; set; }
-        public DbSet<Produto> Produtos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -25,11 +24,28 @@ namespace Loja.Back.Carrinho.Api.Data
                 property.SetColumnType("varchar(100)");
 
             modelBuilder.Ignore<ValidationResult>();
-            modelBuilder.Ignore<Event>();
 
             modelBuilder.Entity<CarrinhoCliente>()
                 .HasIndex(x => x.ClienteId)
                 .HasDatabaseName("IDX_Cliente");
+
+            modelBuilder.Entity<CarrinhoCliente>()
+                .Ignore(x => x.Voucher)
+                .OwnsOne(x => x.Voucher, v =>
+                {
+                    v.Property(vc => vc.Codigo)
+                        .HasColumnName("VoucherCodigo")
+                        .HasColumnType("varchar(50)");
+
+                    v.Property(vc => vc.TipoDesconto)
+                        .HasColumnName("TipoDesconto");
+
+                    v.Property(vc => vc.Percentual)
+                        .HasColumnName("Percentual");
+
+                    v.Property(vc => vc.ValorDesconto)
+                        .HasColumnName("ValorDesconto");
+                });
 
             modelBuilder.Entity<CarrinhoCliente>()
                 .HasMany(x => x.Itens)

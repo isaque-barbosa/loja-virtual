@@ -68,3 +68,4 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\servi
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\obj\Debug\net5.0\ref\Loja.Back.Catalogo.Api.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\obj\Debug\net5.0\Loja.Back.Catalogo.Api.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\obj\Debug\net5.0\Loja.Back.Catalogo.Api.genruntimeconfig.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\services\Loja.Back.Catalogo.Api\bin\Debug\net5.0\NetDevPack.dll

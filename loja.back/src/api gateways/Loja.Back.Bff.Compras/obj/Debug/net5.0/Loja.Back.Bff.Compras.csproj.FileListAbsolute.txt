@@ -123,3 +123,4 @@ C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api g
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\ref\Loja.Back.Bff.Compras.dll
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.pdb
 C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\obj\Debug\net5.0\Loja.Back.Bff.Compras.genruntimeconfig.cache
+C:\Users\isaqueBarbosa\Desktop\Projetos\desafio\loja-virtual\loja.back\src\api gateways\Loja.Back.Bff.Compras\bin\Debug\net5.0\NetDevPack.dll

@@ -72,6 +72,18 @@
           }
         }
       },
+      "NetDevPack/5.3.2": {
+        "dependencies": {
+          "FluentValidation": "10.3.6",
+          "MediatR": "9.0.0"
+        },
+        "runtime": {
+          "lib/net5.0/NetDevPack.dll": {
+            "assemblyVersion": "1.1.0.0",
+            "fileVersion": "1.1.0.0"
+          }
+        }
+      },
       "Newtonsoft.Json/12.0.3": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -106,7 +118,8 @@
         "dependencies": {
           "FluentValidation": "10.3.6",
           "MediatR": "9.0.0",
-          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0"
+          "Microsoft.Extensions.Configuration.Abstractions": "5.0.0",
+          "NetDevPack": "5.3.2"
         },
         "runtime": {
           "Loja.Back.Core.dll": {}
@@ -161,6 +174,13 @@
       "sha512": "sha512-cI/VWn9G1fghXrNDagX9nYaaB/nokkZn0HYAawGaELQrl8InSezfe9OnfPZLcJq3esXxygh3hkq2c3qoV3SDyQ==",
       "path": "microsoft.extensions.primitives/5.0.0",
       "hashPath": "microsoft.extensions.primitives.5.0.0.nupkg.sha512"
+    },
+    "NetDevPack/5.3.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ycjEijBaekvE2mszGx6iwKmpSS+jm6jFIPPrI1UzANWszZrOFZlObYOK/U4CHY5xOAAHjD5uxFqMLRZzb+DvyA==",
+      "path": "netdevpack/5.3.2",
+      "hashPath": "netdevpack.5.3.2.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.3": {
       "type": "package",
