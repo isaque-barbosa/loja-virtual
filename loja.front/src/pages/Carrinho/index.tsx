@@ -20,8 +20,15 @@ import { Alert } from "react-bootstrap";
 
 interface ICarrinho {
     valorTotal: number;
+    voucherUtilizado: boolean;
+    desconto: number;
+    voucher: Voucher;
     itens: Item[];
 };
+
+interface Voucher {
+    codigo: string;
+}
 
 export interface Item {
     produtoId: string;
@@ -35,6 +42,7 @@ export const Carrinho: React.FC = () => {
     const { data } = useFetch<ICarrinho>(`${comprasBffUrl}compras/carrinho`);
 
     const [itens, setItens] = useState<Item[]>(data?.itens || []);
+    const [voucher, setVoucher] = useState<string>();
     const [error, setError] = useState<string[]>();
     const [showAlert, setShowAlert] = useState(false);
 
@@ -55,18 +63,6 @@ export const Carrinho: React.FC = () => {
             }
         });
     }
-
-    function AlertDismissible(){
-
-        return (
-          <Alert variant="danger" hidden={!showAlert} onClose={() => setShowAlert(false)} dismissible>
-              <Alert.Heading>Ops! Algo deu errado. :(</Alert.Heading>
-                  {error?.map((error, i) => {
-                      return <li key={i}>{error}</li> 
-                  })}
-          </Alert>
-        );
-  }
 
     async function atualizarItem(produtoId: string){
         const quantidade = itens.find(x => x.produtoId === produtoId)?.quantidade || 1;
@@ -93,6 +89,45 @@ export const Carrinho: React.FC = () => {
         });
         setError(erros);
         setShowAlert(true);
+    }
+
+    async function aplicarVoucher(){
+        await api.post(`${comprasBffUrl}compras/carrinho/aplicar-voucher`, voucher)
+        .then(response => {
+            console.log("Voucher aplicado com sucesso.");
+            window.location.reload();            
+        })
+        .catch(function (error){
+            tratarErro(error);
+        });
+    }
+
+    function tratarErro(error: any){
+        const erros = [] as string[];
+
+        try{
+            const response  = error.response.data as Error;
+            response.errors.Mensagens.forEach(mensagem => erros.push(mensagem));
+            console.log(response);
+        }
+        catch{
+            console.log("Servidor indisponível. Desculpe a inconveniência! Tente novamente mais tarde.");
+        }
+
+        setError(erros);
+        setShowAlert(true);
+    }
+
+    function AlertDismissible(){
+
+        return (
+          <Alert variant="danger" hidden={!showAlert} onClose={() => setShowAlert(false)} dismissible>
+              <Alert.Heading>Ops! Algo deu errado. :(</Alert.Heading>
+                  {error?.map((error, i) => {
+                      return <li key={i}>{error}</li> 
+                  })}
+          </Alert>
+        );
     }
 
     if(!data){
@@ -252,7 +287,11 @@ export const Carrinho: React.FC = () => {
                                             </label>
 
                                             <div className="input-group">
-                                                <input type="text" className="form-control" placeholder="Cupom Desconto" />
+                                                <input type="text"
+                                                    value={data.voucher?.codigo}
+                                                    className="form-control"
+                                                    placeholder="Cupom Desconto"
+                                                    onChange={x => setVoucher(x.target.value)} />
                                                 <span className="input-group-append">
                                                     <button className="btn btn-primary">
                                                         Aplicar
@@ -266,23 +305,28 @@ export const Carrinho: React.FC = () => {
 
                                 <div className="card">
                                     <div className="card-body">
-                                        <dl className="dlist-align">
-                                            <dt>
-                                                Valor Total:
-                                            </dt>
-                                            <dd className="text-right">
-                                                {CurrencyMask.format(data.valorTotal)}
-                                            </dd>
-                                        </dl>
+                                        {data.voucherUtilizado &&
+                                        <div> 
+                                            <dl className="dlist-align">
+                                                <dt>
+                                                    Valor Total:
+                                                </dt>
+                                                <dd className="text-right">
+                                                    {CurrencyMask.format(data.valorTotal + data.desconto)}
+                                                </dd>
+                                            </dl>
 
-                                        <dl className="dlist-align">
-                                            <dt>
-                                                Desconto:
-                                            </dt>
-                                            <dd className="text-right">
-                                                {CurrencyMask.format(0)}
-                                            </dd>
-                                        </dl>
+                                            <dl className="dlist-align">
+                                                <dt>
+                                                    Desconto:
+                                                </dt>
+                                                <dd className="text-right">
+                                                    {CurrencyMask.format(data.desconto)}
+                                                </dd>
+                                            </dl>
+                                        </div>
+                                        }
+                                        
 
                                         <dl className="dlist-align">
                                             <dt>
