@@ -94,8 +94,8 @@ namespace Loja.Back.Bff.Compras.Controllers
         }
 
         [HttpPost]
-        [Route("compras/carrinho/aplicar-voucher")]
-        public async Task<IActionResult> AplicarVoucher([FromBody] string voucherCodigo)
+        [Route("compras/carrinho/aplicar-voucher/{voucherCodigo}")]
+        public async Task<IActionResult> AplicarVoucher(string voucherCodigo)
         {
             var voucher = await _pedidoService.ObterVoucherPorCodigo(voucherCodigo);
             if(voucher is null)

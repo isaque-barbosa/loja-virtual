@@ -29,6 +29,12 @@ namespace Loja.Back.Bff.Compras.Configuration
                 .AddPolicyHandler(PollyExtensions.EsperarTentar())
                 .AddTransientHttpErrorPolicy(
                     x => x.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
+
+            services.AddHttpClient<IPedidoService, PedidoService>()
+                .AddHttpMessageHandler<HttpClientAuthorizationDelegatingHandler>()
+                .AddPolicyHandler(PollyExtensions.EsperarTentar())
+                .AddTransientHttpErrorPolicy(
+                    x => x.CircuitBreakerAsync(5, TimeSpan.FromSeconds(30)));
         }
     }
 }
