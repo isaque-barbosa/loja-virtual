@@ -92,7 +92,8 @@ export const Carrinho: React.FC = () => {
     }
 
     async function aplicarVoucher(){
-        await api.post(`${comprasBffUrl}compras/carrinho/aplicar-voucher`, voucher)
+        console.log(voucher);
+        await api.post(`${comprasBffUrl}compras/carrinho/aplicar-voucher/${voucher}`)
         .then(response => {
             console.log("Voucher aplicado com sucesso.");
             window.location.reload();            
@@ -293,7 +294,8 @@ export const Carrinho: React.FC = () => {
                                                     placeholder="Cupom Desconto"
                                                     onChange={x => setVoucher(x.target.value)} />
                                                 <span className="input-group-append">
-                                                    <button className="btn btn-primary">
+                                                    <button className="btn btn-primary"
+                                                    onClick={() => aplicarVoucher()}>
                                                         Aplicar
                                                     </button>
                                                 </span>
