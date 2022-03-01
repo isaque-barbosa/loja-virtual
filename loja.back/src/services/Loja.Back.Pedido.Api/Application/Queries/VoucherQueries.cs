@@ -1,8 +1,5 @@
 ﻿using Loja.Back.Pedidos.Api.Application.DTO;
 using Loja.Back.Pedidos.Domain.Vouchers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Loja.Back.Pedidos.Api.Application.Queries

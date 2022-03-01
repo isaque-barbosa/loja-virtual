@@ -1,7 +1,6 @@
 ﻿using Loja.Back.Core.Data;
 using Loja.Back.Pedidos.Domain.Vouchers;
 using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System.Threading.Tasks;
 
 namespace Loja.Back.Pedidos.Infra.Data.Repository

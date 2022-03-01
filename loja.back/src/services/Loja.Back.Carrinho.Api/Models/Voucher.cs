@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Loja.Back.Carrinho.Api.Models
+﻿namespace Loja.Back.Carrinho.Api.Models
 {
     public class Voucher
     {

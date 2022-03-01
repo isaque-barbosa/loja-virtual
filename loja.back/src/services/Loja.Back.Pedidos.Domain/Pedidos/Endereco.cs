@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Loja.Back.Pedidos.Domain.Pedidos
+﻿namespace Loja.Back.Pedidos.Domain.Pedidos
 {
     public class Endereco
     {

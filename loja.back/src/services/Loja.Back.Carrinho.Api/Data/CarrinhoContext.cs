@@ -1,6 +1,5 @@
 ﻿using FluentValidation.Results;
 using Loja.Back.Carrinho.Api.Models;
-using Loja.Back.Core.Messages;
 using Microsoft.EntityFrameworkCore;
 using System.Linq;
 

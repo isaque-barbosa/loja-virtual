@@ -98,7 +98,7 @@ namespace Loja.Back.Bff.Compras.Controllers
         public async Task<IActionResult> AplicarVoucher(string voucherCodigo)
         {
             var voucher = await _pedidoService.ObterVoucherPorCodigo(voucherCodigo);
-            if(voucher is null)
+            if (voucher is null)
             {
                 AdicionarErroProcessamento("Voucher inválido ou não encontrado!");
                 return CustomResponse();

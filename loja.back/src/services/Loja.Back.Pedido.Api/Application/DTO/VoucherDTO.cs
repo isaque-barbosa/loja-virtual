@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace Loja.Back.Pedidos.Api.Application.DTO
+﻿namespace Loja.Back.Pedidos.Api.Application.DTO
 {
     public class VoucherDTO
     {

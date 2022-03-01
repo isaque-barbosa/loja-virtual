@@ -3,8 +3,6 @@ using Loja.Back.Pedidos.Domain.Vouchers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Loja.Back.Pedidos.Domain.Pedidos
 {
@@ -74,9 +72,9 @@ namespace Loja.Back.Pedidos.Domain.Pedidos
             decimal desconto = 0;
             var valor = ValorTotal;
 
-            if(Voucher.TipoDesconto == TipoDescontoVoucher.Porcentagem)
+            if (Voucher.TipoDesconto == TipoDescontoVoucher.Porcentagem)
             {
-                if(Voucher.Percentual.HasValue)
+                if (Voucher.Percentual.HasValue)
                 {
                     desconto = (valor * Voucher.Percentual.Value) / 100;
                     valor -= desconto;
@@ -84,7 +82,7 @@ namespace Loja.Back.Pedidos.Domain.Pedidos
             }
             else
             {
-                if(Voucher.ValorDesconto.HasValue)
+                if (Voucher.ValorDesconto.HasValue)
                 {
                     desconto = Voucher.ValorDesconto.Value;
                     valor -= desconto;
