@@ -17,6 +17,8 @@ namespace Loja.Back.Pedidos.Infra.Data.Repository
             _context = context;
         }
 
+        public IUnitOfWork UnitOfWork => _context;
+
         public async Task<Pedido> ObterPorId(Guid id)
         {
             return await _context.Pedidos.FindAsync(id);
@@ -51,8 +53,6 @@ namespace Loja.Back.Pedidos.Infra.Data.Repository
             return await _context.PedidoItems
                 .FirstOrDefaultAsync(x => x.ProdutoId == produtoId && x.PedidoId == pedidoId);
         }
-
-        public IUnitOfWork UnitOfWork => _context;
 
         public void Dispose()
         {
